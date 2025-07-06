@@ -1,0 +1,15 @@
+# Hero Image Placeholders
+
+This directory will contain professional photography for the hero section:
+
+- sanctuary-main.jpg - Main hero background image (1920x1080)
+- sanctuary-alt.jpg - Alternative hero image (1920x1080)
+- victoria-welcome.jpg - Victoria welcoming clients (1920x1080)
+
+All images should:
+- Be professionally shot with soft, luxurious lighting
+- Show the healing space with Tesla Table and RoXiva equipment
+- Include Victoria in some shots for personal connection
+- Use muted, calming color tones
+- Be optimized for web (WebP format preferred)
+- Include proper alt text for accessibility

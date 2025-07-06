@@ -1,0 +1,21 @@
+{
+  "name": "The Healing Frequency Space",
+  "short_name": "THFS",
+  "description": "Nashville's premier destination for frequency-based healing. Transform your well-being with Tesla Wellness Table and RoXiva light therapy sessions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#C17E5A",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

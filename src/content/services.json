@@ -1,0 +1,179 @@
+{
+  "services": [
+    {
+      "id": "tesla-table",
+      "name": "tesla-table",
+      "displayName": "Tesla Wellness Table",
+      "description": "Experience the transformative power of scalar wave technology with Nashville's only Tesla Wellness Table. This cutting-edge bioenergetic device helps restore your body's natural electromagnetic field, promoting deep healing and cellular regeneration.",
+      "benefits": [
+        "Reduces stress and promotes deep relaxation",
+        "Enhances cellular energy and vitality",
+        "Supports natural healing processes",
+        "Balances electromagnetic field",
+        "Improves sleep quality and mental clarity",
+        "Boosts immune system function"
+      ],
+      "durations": [
+        {
+          "minutes": 20,
+          "price": 50,
+          "description": "Introduction session",
+          "isPopular": false
+        },
+        {
+          "minutes": 30,
+          "price": 75,
+          "description": "Standard session",
+          "isPopular": true
+        },
+        {
+          "minutes": 40,
+          "price": 100,
+          "description": "Extended session"
+        },
+        {
+          "minutes": 60,
+          "price": 140,
+          "description": "Full immersion"
+        }
+      ],
+      "packages": [
+        {
+          "id": "tesla-4-pack",
+          "sessionCount": 4,
+          "discountPercent": 15,
+          "expirationDays": 90,
+          "totalPrice": 255,
+          "savings": 45
+        },
+        {
+          "id": "tesla-8-pack",
+          "sessionCount": 8,
+          "discountPercent": 20,
+          "expirationDays": 180,
+          "totalPrice": 480,
+          "savings": 120
+        },
+        {
+          "id": "tesla-10-pack",
+          "sessionCount": 10,
+          "discountPercent": 25,
+          "expirationDays": 365,
+          "totalPrice": 562,
+          "savings": 188
+        }
+      ],
+      "imageUrl": "/images/services/tesla-table.jpg",
+      "category": "in-person"
+    },
+    {
+      "id": "roxiva",
+      "name": "roxiva",
+      "displayName": "RoXiva Light Therapy",
+      "description": "Journey into transformative states of consciousness with RoXiva's advanced light and sound technology. This immersive experience uses precisely calibrated frequencies to guide your brain into therapeutic states for deep healing and personal insight.",
+      "benefits": [
+        "Reduces anxiety and depression",
+        "Enhances meditation and mindfulness",
+        "Improves focus and mental clarity",
+        "Balances brainwave patterns",
+        "Facilitates emotional release",
+        "Promotes spiritual insight and growth"
+      ],
+      "durations": [
+        {
+          "minutes": 25,
+          "price": 60,
+          "description": "Intro journey",
+          "isPopular": true
+        },
+        {
+          "minutes": 45,
+          "price": 90,
+          "description": "Deep journey"
+        }
+      ],
+      "packages": [
+        {
+          "id": "roxiva-4-pack",
+          "sessionCount": 4,
+          "discountPercent": 15,
+          "expirationDays": 90,
+          "totalPrice": 204,
+          "savings": 36
+        },
+        {
+          "id": "roxiva-8-pack",
+          "sessionCount": 8,
+          "discountPercent": 20,
+          "expirationDays": 180,
+          "totalPrice": 384,
+          "savings": 96
+        }
+      ],
+      "imageUrl": "/images/services/roxiva.jpg",
+      "category": "in-person"
+    },
+    {
+      "id": "consultation",
+      "name": "consultation",
+      "displayName": "Initial Consultation",
+      "description": "Begin your healing journey with a comprehensive 2-hour session including health assessment, personalized frequency selection via kinesiology, and your first treatment. Victoria will create a customized wellness plan tailored to your unique needs.",
+      "benefits": [
+        "Complete health and wellness assessment",
+        "Personalized frequency selection via kinesiology",
+        "Customized treatment plan",
+        "Education on frequency healing principles",
+        "First treatment session included",
+        "Ongoing support recommendations"
+      ],
+      "durations": [
+        {
+          "minutes": 120,
+          "price": 150,
+          "description": "Comprehensive assessment + first treatment"
+        }
+      ],
+      "packages": [],
+      "imageUrl": "/images/services/consultation.jpg",
+      "category": "in-person"
+    },
+    {
+      "id": "remote",
+      "name": "remote",
+      "displayName": "Remote Frequency Sessions",
+      "description": "Experience the power of distance healing through our remote frequency sessions. Using advanced quantum field technology, Victoria can provide personalized frequency healing from anywhere in the world.",
+      "benefits": [
+        "Convenient healing from home",
+        "Personalized frequency protocols",
+        "Quantum field technology",
+        "Virtual consultation included",
+        "Ongoing support and guidance",
+        "Flexible scheduling options"
+      ],
+      "durations": [
+        {
+          "minutes": 30,
+          "price": 75,
+          "description": "Virtual consultation + remote healing"
+        },
+        {
+          "minutes": 60,
+          "price": 120,
+          "description": "Extended remote session"
+        }
+      ],
+      "packages": [
+        {
+          "id": "remote-4-pack",
+          "sessionCount": 4,
+          "discountPercent": 15,
+          "expirationDays": 90,
+          "totalPrice": 255,
+          "savings": 45
+        }
+      ],
+      "imageUrl": "/images/services/remote.jpg",
+      "category": "remote"
+    }
+  ]
+}
