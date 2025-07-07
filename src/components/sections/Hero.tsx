@@ -62,7 +62,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.9 }}
         >
-          A place to reset, recharge, and reconnect with your highest self through the transformative power of frequency healing.
+          A place to reset, recharge, and reconnect with your highest self through the transformative power of quantum.
         </motion.p>
         
         {/* Tagline with elegant emphasis */}
