@@ -1,15 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    // Enable App Router
-  },
+  output: 'export',
   images: {
-    domains: ['localhost'],
-    formats: ['image/webp', 'image/avif'],
+    unoptimized: true,
   },
-  // Optimize performance
-  compress: true,
-  poweredByHeader: false,
 }
 
 module.exports = nextConfig

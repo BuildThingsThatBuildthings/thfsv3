@@ -76,7 +76,7 @@ export function WhyChooseUs() {
             transition={{ duration: 1.0, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            Nashville's Most{' '}
+            Nashville&apos;s Most{' '}
             <span className="italic text-sage font-normal">Trusted</span>{' '}
             Healing Sanctuary
           </motion.h2>
@@ -147,7 +147,7 @@ export function WhyChooseUs() {
               & Certifications
             </h3>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Victoria's extensive training and certifications ensure you receive the highest quality care.
+              Victoria&apos;s extensive training and certifications ensure you receive the highest quality care.
             </p>
           </div>
           
@@ -191,7 +191,7 @@ export function WhyChooseUs() {
             for Yourself
           </h3>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-            Join the thousands who have discovered true healing at Nashville's premier frequency healing sanctuary.
+            Join the thousands who have discovered true healing at Nashville&apos;s premier frequency healing sanctuary.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -231,7 +231,7 @@ export function WhyChooseUs() {
             </div>
             <div className="flex items-center gap-2 text-slate-600">
               <div className="w-2 h-2 bg-gold rounded-full" />
-              <span className="text-sm">Nashville's Only Tesla Wellness Table</span>
+              <span className="text-sm">Nashville&apos;s Only Tesla Wellness Table</span>
             </div>
           </motion.div>
         </motion.div>

@@ -82,7 +82,7 @@ export function FeaturedServices() {
             transition={{ duration: 1.0, delay: 0.6 }}
             viewport={{ once: true }}
           >
-            Discover Nashville's most advanced healing technologies, exclusively available at 
+            Discover Nashville&apos;s most advanced healing technologies, exclusively available at 
             The Healing Frequency Space. Each session is carefully customized to your unique needs.
           </motion.p>
         </motion.div>

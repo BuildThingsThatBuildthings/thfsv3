@@ -33,7 +33,7 @@ export function About() {
                 Meet Victoria
               </span>
               <h2 className="text-4xl md:text-5xl font-inter font-light text-slate-900 mt-4 mb-6 tracking-tight">
-                Nashville's Premier{' '}
+                Nashville&apos;s Premier{' '}
                 <span className="italic text-sage font-normal">Frequency Healing</span>{' '}
                 Expert
               </h2>
@@ -52,7 +52,7 @@ export function About() {
                 frequency healing.
               </p>
               <p>
-                As Nashville's only certified practitioner offering Tesla Wellness Table and RoXiva 
+                As Nashville&apos;s only certified practitioner offering Tesla Wellness Table and RoXiva 
                 light therapy sessions, Victoria combines cutting-edge technology with time-tested 
                 healing wisdom to create truly personalized healing experiences.
               </p>
@@ -75,7 +75,7 @@ export function About() {
                 size="lg"
                 className="hover:scale-105 transition-transform duration-300"
               >
-                Learn About Victoria's Journey
+                Learn About Victoria&apos;s Journey
               </Button>
               <Button
                 href="/booking"
@@ -129,7 +129,7 @@ export function About() {
           >
             <div className="relative aspect-[4/5] rounded-lg overflow-hidden shadow-2xl">
               <Image
-                src="/images/placeholder.svg"
+                src="/images/victoria-healing-expert.jpeg"
                 alt="Victoria - The Healing Frequency Space founder and practitioner"
                 fill
                 className="object-cover"

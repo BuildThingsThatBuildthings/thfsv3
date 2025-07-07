@@ -146,7 +146,7 @@ export function TransformationStories() {
               
               {/* Quote */}
               <blockquote className="text-xl md:text-2xl text-slate-700 leading-relaxed font-light italic mb-8">
-                "{transformationStories[activeStory].story}"
+                &quot;{transformationStories[activeStory].story}&quot;
               </blockquote>
               
               {/* Client Info */}

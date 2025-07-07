@@ -45,7 +45,7 @@ export function Footer() {
               transition={{ duration: 1.0, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              Nashville's premier destination for frequency-based healing. Experience transformative 
+              Nashville&apos;s premier destination for frequency-based healing. Experience transformative 
               wellness through our exclusive Tesla Wellness Table and RoXiva light therapy sessions.
             </motion.p>
             
@@ -62,7 +62,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2 text-sm text-slate-400">
                 <div className="w-1.5 h-1.5 bg-gold rounded-full" />
-                <span>Nashville's Only Tesla Wellness Table</span>
+                <span>Nashville&apos;s Only Tesla Wellness Table</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-slate-400">
                 <div className="w-1.5 h-1.5 bg-gold rounded-full" />

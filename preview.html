@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Healing Frequency Space - Preview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', sans-serif;
+            color: #334155;
+            line-height: 1.6;
+        }
+        
+        /* Natural Color Palette */
+        :root {
+            --terracotta: #C17E5A;
+            --terracotta-dark: #A66B47;
+            --sage: #8FA68E;
+            --warm-gold: #D4A574;
+            --cream: #F5F5DC;
+            --slate-600: #475569;
+            --slate-700: #334155;
+        }
+        
+        /* Navigation (Hidden initially, shows on scroll) */
+        nav {
+            position: fixed;
+            top: -100px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: top 0.3s ease;
+            padding: 20px 0;
+        }
+        
+        nav.visible {
+            top: 0;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 20px;
+            letter-spacing: 0.3em;
+            color: #000;
+            font-weight: 300;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--slate-600);
+            font-size: 14px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+            padding-bottom: 2px;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .nav-links a:hover {
+            color: var(--terracotta);
+            border-bottom-color: var(--terracotta);
+        }
+        
+        .nav-cta {
+            background: var(--terracotta);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(193, 126, 90, 0.3);
+        }
+        
+        .nav-cta:hover {
+            background: var(--terracotta-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(193, 126, 90, 0.4);
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(to bottom, 
+                rgba(255, 255, 255, 0.2) 0%, 
+                rgba(0, 0, 0, 0.3) 50%, 
+                rgba(0, 0, 0, 0.7) 100%),
+                #2c3e50;
+        }
+        
+        .video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            color: white;
+            max-width: 1000px;
+            padding: 0 32px;
+        }
+        
+        .hero h2 {
+            font-size: 14px;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            opacity: 0.9;
+            margin-bottom: 48px;
+            font-weight: 300;
+        }
+        
+        .hero h1 {
+            font-size: clamp(36px, 5vw, 72px);
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 32px;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero h1 .italic {
+            font-style: italic;
+            color: var(--warm-gold);
+            font-weight: 400;
+        }
+        
+        .hero p {
+            font-size: 22px;
+            opacity: 0.85;
+            max-width: 800px;
+            margin: 0 auto 48px;
+            font-weight: 300;
+        }
+        
+        .tagline {
+            font-size: 18px;
+            color: var(--warm-gold);
+            opacity: 0.9;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 64px;
+            font-weight: 300;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            margin-bottom: 80px;
+        }
+        
+        .btn-primary {
+            background: var(--terracotta);
+            color: white;
+            padding: 16px 48px;
+            font-size: 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: var(--terracotta-dark);
+            transform: scale(1.05);
+        }
+        
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 16px 48px;
+            font-size: 18px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: scale(1.05);
+        }
+        
+        .trust-indicators {
+            display: flex;
+            gap: 48px;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+        }
+        
+        .trust-indicators span {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .dot {
+            width: 6px;
+            height: 6px;
+            background: var(--warm-gold);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        /* About Section */
+        .about {
+            padding: 128px 0;
+            background: linear-gradient(to bottom, white, rgba(245, 245, 220, 0.1), white);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .section-label {
+            color: var(--terracotta);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 14px;
+        }
+        
+        .section-title {
+            font-size: 48px;
+            font-weight: 300;
+            margin: 16px 0 24px;
+            line-height: 1.2;
+            color: #1e293b;
+        }
+        
+        .section-title .italic {
+            font-style: italic;
+            color: var(--sage);
+            font-weight: 400;
+        }
+        
+        .about-text {
+            font-size: 18px;
+            color: var(--slate-600);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        
+        .about-buttons {
+            display: flex;
+            gap: 16px;
+            margin-top: 48px;
+        }
+        
+        .about-image {
+            position: relative;
+            aspect-ratio: 4/5;
+            background: linear-gradient(to top, rgba(143, 166, 142, 0.2), transparent),
+                        var(--cream);
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+        
+        .floating-stat {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(143, 166, 142, 0.2);
+            text-align: center;
+        }
+        
+        .floating-stat:first-child {
+            bottom: -24px;
+            left: -24px;
+        }
+        
+        .floating-stat:last-child {
+            top: -24px;
+            right: -24px;
+        }
+        
+        .stat-number {
+            font-size: 32px;
+            font-weight: 300;
+            color: var(--terracotta);
+            margin-bottom: 4px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: var(--slate-600);
+            font-weight: 500;
+        }
+        
+        /* Services Preview */
+        .services-preview {
+            padding: 128px 0;
+            background: linear-gradient(to bottom, white, rgba(112, 128, 144, 0.05), white);
+        }
+        
+        .service-card {
+            background: white;
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            margin-bottom: 48px;
+        }
+        
+        .service-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 24px;
+        }
+        
+        .service-name {
+            font-size: 32px;
+            font-weight: 300;
+            color: #1e293b;
+        }
+        
+        .service-tagline {
+            color: var(--terracotta);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+        }
+        
+        .service-price {
+            color: var(--terracotta);
+            font-size: 24px;
+            font-weight: 500;
+        }
+        
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+        
+        .scroll-text {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 8px;
+        }
+        
+        .scroll-icon {
+            width: 24px;
+            height: 40px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            position: relative;
+            margin: 0 auto;
+        }
+        
+        .scroll-dot {
+            width: 4px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 2px;
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: scroll 2s infinite;
+        }
+        
+        @keyframes scroll {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(12px); }
+        }
+        
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .nav-links, .nav-cta { display: none; }
+            .hero-buttons { flex-direction: column; }
+            .trust-indicators { flex-direction: column; gap: 16px; }
+            .about-grid { grid-template-columns: 1fr; gap: 48px; }
+            .floating-stat { position: static; margin: 16px 0; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation (appears on scroll) -->
+    <nav id="navigation">
+        <div class="nav-container">
+            <div class="logo">THE HEALING FREQUENCY SPACE</div>
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#testimonials">TESTIMONIALS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <a href="#booking" class="nav-cta">Schedule an Appointment</a>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="video-bg" style="background: linear-gradient(45deg, #2c3e50, #3498db, #2c3e50); background-size: 400% 400%; animation: gradient 15s ease infinite;"></div>
+        
+        <div class="hero-content">
+            <h2>The Healing Frequency Space</h2>
+            <h1>Have you ever wished for a <span class="italic">true sanctuary</span>?</h1>
+            <p>A place to reset, recharge, and reconnect with your highest self through the transformative power of frequency healing.</p>
+            <p class="tagline">Change Your Frequency, Change Everything</p>
+            
+            <div class="hero-buttons">
+                <a href="#booking" class="btn-primary">Schedule an Appointment</a>
+                <a href="#about" class="btn-outline">Meet Victoria</a>
+            </div>
+            
+            <div class="trust-indicators">
+                <span><div class="dot"></div> 30+ Years Experience</span>
+                <span><div class="dot"></div> Nashville's Only Tesla Wellness Table</span>
+                <span><div class="dot"></div> Certified Holistic Practitioner</span>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-text">Scroll to Explore</div>
+            <div class="scroll-icon">
+                <div class="scroll-dot"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div>
+                    <span class="section-label">Meet Victoria</span>
+                    <h2 class="section-title">
+                        Nashville's Premier
+                        <span class="italic">Frequency Healing</span>
+                        Expert
+                    </h2>
+                    <p class="about-text">
+                        With over 30 years of experience in holistic healing, Victoria has dedicated her life to helping others find their path to wellness through the transformative power of frequency healing.
+                    </p>
+                    <p class="about-text">
+                        As Nashville's only certified practitioner offering Tesla Wellness Table and RoXiva light therapy sessions, Victoria combines cutting-edge technology with time-tested healing wisdom to create truly personalized healing experiences.
+                    </p>
+                    <div class="about-buttons">
+                        <a href="#" class="btn-primary">Learn About Victoria's Journey</a>
+                        <a href="#" class="btn-outline" style="color: var(--slate-700); border-color: var(--slate-700);">Book a Consultation</a>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <div class="floating-stat">
+                        <div class="stat-number">30+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="floating-stat">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">Lives Transformed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Preview -->
+    <section class="services-preview">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 80px;">
+                <span class="section-label">Featured Healing Technologies</span>
+                <h2 class="section-title">
+                    Revolutionary <span class="italic">Frequency Healing</span> Experiences
+                </h2>
+                <p style="font-size: 20px; color: var(--slate-600); max-width: 800px; margin: 0 auto;">
+                    Discover Nashville's most advanced healing technologies, exclusively available at The Healing Frequency Space.
+                </p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-header">
+                    <div>
+                        <div class="service-tagline">Nashville's Only Tesla Wellness Experience</div>
+                        <h3 class="service-name">Tesla Wellness Table</h3>
+                    </div>
+                    <div class="service-price">Starting at $150</div>
+                </div>
+                <p style="color: var(--slate-600); font-size: 18px; line-height: 1.8;">
+                    Experience the revolutionary Tesla Wellness Table - the only one in Nashville. This cutting-edge technology combines energy, frequency, and light to promote cellular regeneration and deep healing.
+                </p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-header">
+                    <div>
+                        <div class="service-tagline">Advanced Brainwave Entrainment</div>
+                        <h3 class="service-name">RoXiva Light Therapy</h3>
+                    </div>
+                    <div class="service-price">Starting at $125</div>
+                </div>
+                <p style="color: var(--slate-600); font-size: 18px; line-height: 1.8;">
+                    Immerse yourself in the transformative power of RoXiva light therapy. This advanced system uses precise frequencies and light patterns to guide your brain into optimal states for healing and consciousness expansion.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+    
+    <script>
+        // Show navigation on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('navigation');
+            if (window.scrollY > 100) {
+                nav.classList.add('visible');
+            } else {
+                nav.classList.remove('visible');
+            }
+        });
+    </script>
+</body>
+</html>

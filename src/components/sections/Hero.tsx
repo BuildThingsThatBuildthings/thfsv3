@@ -1,12 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui';
 export function Hero() {
   const [videoLoaded, setVideoLoaded] = useState(false);
-  const [contentReady, setContentReady] = useState(true); // Always show content
   
   return (
     <section className="relative min-h-screen w-full overflow-hidden">
@@ -17,7 +15,7 @@ export function Hero() {
           muted
           loop
           playsInline
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-30 blur-sm"
           onLoadedData={() => setVideoLoaded(true)}
           onError={() => setVideoLoaded(false)}
           poster="/images/placeholder.svg"
@@ -27,18 +25,18 @@ export function Hero() {
         
         {/* Fallback background if video fails */}
         {!videoLoaded && (
-          <div className="absolute inset-0 bg-gradient-to-b from-sage/20 via-slate-600 to-black" />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-cream/80 to-sage/20" />
         )}
         
-        {/* Light-to-dark gradient overlay as requested */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-black/30 to-black/70" />
+        {/* Subtle white overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/70 to-white/60" />
       </div>
       
       {/* Content overlay */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-8 py-20">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-8 py-32">
         {/* Business name - Elegant spacing */}
         <motion.h2 
-          className="text-sm md:text-base font-light text-white/90 mb-16 tracking-[0.3em] text-shadow uppercase"
+          className="text-sm md:text-base font-light text-slate-700 mb-24 tracking-[0.3em] uppercase"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.3 }}
@@ -48,18 +46,18 @@ export function Hero() {
         
         {/* Main hook with enhanced typography */}
         <motion.h1
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-inter font-light text-white mb-12 max-w-5xl leading-[1.1] text-shadow tracking-tight"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-inter font-light text-slate-900 mb-20 max-w-5xl leading-[1.1] tracking-tight"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.6 }}
         >
           Have you ever wished for a{' '}
-          <span className="font-medium italic text-warmGold">true sanctuary</span>?
+          <span className="font-medium italic text-terracotta-600">true sanctuary</span>?
         </motion.h1>
         
         {/* Subtitle with more breathing room */}
         <motion.p
-          className="text-xl md:text-2xl text-white/85 mb-16 max-w-3xl leading-relaxed text-shadow font-light"
+          className="text-xl md:text-2xl text-slate-700 mb-24 max-w-3xl leading-relaxed font-light"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.9 }}
@@ -69,7 +67,7 @@ export function Hero() {
         
         {/* Tagline with elegant emphasis */}
         <motion.p
-          className="text-lg md:text-xl font-inter font-light text-warmGold/90 mb-20 tracking-wider text-shadow uppercase"
+          className="text-lg md:text-xl font-inter font-light text-terracotta-500 mb-32 tracking-wider uppercase"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 1.2 }}
@@ -79,7 +77,7 @@ export function Hero() {
         
         {/* CTA Buttons with elegant spacing */}
         <motion.div
-          className="flex flex-col sm:flex-row gap-6 items-center mb-24"
+          className="flex flex-col sm:flex-row gap-6 items-center mb-32"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 1.5 }}
@@ -97,7 +95,7 @@ export function Hero() {
             href="/about"
             variant="outline"
             size="lg"
-            className="text-lg px-12 py-5 bg-white/5 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 shadow-2xl transition-all duration-300 hover:scale-105"
+            className="text-lg px-12 py-5 bg-white/50 backdrop-blur-sm border-2 border-slate-300 text-slate-800 hover:bg-white/70 hover:border-slate-400 shadow-xl transition-all duration-300 hover:scale-105"
           >
             Meet Victoria
           </Button>
@@ -105,21 +103,21 @@ export function Hero() {
         
         {/* Trust indicators with elegant design */}
         <motion.div
-          className="flex flex-col md:flex-row items-center gap-12 text-white/70 text-sm"
+          className="flex flex-col md:flex-row items-center gap-12 text-slate-600 text-sm"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 1.8 }}
         >
           <div className="flex items-center gap-3">
-            <div className="w-1.5 h-1.5 bg-warmGold rounded-full animate-pulse"></div>
+            <div className="w-1.5 h-1.5 bg-terracotta-500 rounded-full animate-pulse"></div>
             <span className="tracking-wide">30+ Years Experience</span>
           </div>
           <div className="flex items-center gap-3">
-            <div className="w-1.5 h-1.5 bg-warmGold rounded-full animate-pulse"></div>
+            <div className="w-1.5 h-1.5 bg-terracotta-500 rounded-full animate-pulse"></div>
             <span className="tracking-wide">Nashville&apos;s Only Tesla Wellness Table</span>
           </div>
           <div className="flex items-center gap-3">
-            <div className="w-1.5 h-1.5 bg-warmGold rounded-full animate-pulse"></div>
+            <div className="w-1.5 h-1.5 bg-terracotta-500 rounded-full animate-pulse"></div>
             <span className="tracking-wide">Certified Holistic Practitioner</span>
           </div>
         </motion.div>
@@ -132,9 +130,9 @@ export function Hero() {
           transition={{ duration: 1.2, delay: 2.1 }}
         >
           <div className="flex flex-col items-center gap-2">
-            <span className="text-white/60 text-xs uppercase tracking-wider font-light">Scroll to Explore</span>
+            <span className="text-slate-500 text-xs uppercase tracking-wider font-light">Scroll to Explore</span>
             <motion.div
-              className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center"
+              className="w-6 h-10 border-2 border-slate-400 rounded-full flex justify-center"
               animate={{
                 opacity: [1, 0.5, 1],
               }}
@@ -145,7 +143,7 @@ export function Hero() {
               }}
             >
               <motion.div
-                className="w-1 h-3 bg-white/60 rounded-full mt-2"
+                className="w-1 h-3 bg-slate-500 rounded-full mt-2"
                 animate={{
                   y: [0, 12, 0],
                 }}
