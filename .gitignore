@@ -35,5 +35,5 @@ yarn-error.log*
 next-env.d.ts
 
 # videos (large files)
-/public/videos/*.mp4
+# /public/videos/*.mp4
 !/public/videos/.gitkeep
