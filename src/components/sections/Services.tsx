@@ -61,7 +61,7 @@ function ServiceCard({ service, index }: ServiceCardProps) {
         
         {/* Service Content */}
         <div className="p-6">
-          <h3 className="text-xl font-inter font-semibold text-slate-900 mb-3">
+          <h3 className="text-xl font-inter font-semibold text-amber-800 mb-3">
             {service.displayName}
           </h3>
           
@@ -71,7 +71,7 @@ function ServiceCard({ service, index }: ServiceCardProps) {
           
           {/* Benefits Preview */}
           <div className="mb-4">
-            <h4 className="text-sm font-medium text-slate-700 mb-2">Key Benefits:</h4>
+            <h4 className="text-sm font-medium text-amber-700 mb-2">Key Benefits:</h4>
             <ul className="space-y-1">
               {service.benefits.slice(0, isExpanded ? service.benefits.length : 3).map((benefit, i) => (
                 <li key={i} className="flex items-start gap-2 text-sm text-slate-600">
@@ -93,7 +93,7 @@ function ServiceCard({ service, index }: ServiceCardProps) {
           
           {/* Duration Options */}
           <div className="mb-4">
-            <h4 className="text-sm font-medium text-slate-700 mb-2">Session Options:</h4>
+            <h4 className="text-sm font-medium text-amber-700 mb-2">Session Options:</h4>
             <div className="space-y-2">
               {service.durations.map((duration, i) => (
                 <div key={i} className="flex justify-between items-center text-sm">
@@ -105,7 +105,7 @@ function ServiceCard({ service, index }: ServiceCardProps) {
                       </span>
                     )}
                   </span>
-                  <span className="font-medium text-slate-900">${duration.price}</span>
+                  <span className="font-medium text-amber-800">${duration.price}</span>
                 </div>
               ))}
             </div>
@@ -162,7 +162,7 @@ export function Services() {
             viewport={{ once: true }}
           >
             <motion.h2 
-              className="text-5xl md:text-6xl font-inter font-light text-slate-900 mb-8 tracking-tight"
+              className="text-5xl md:text-6xl font-inter font-light text-amber-800 mb-8 tracking-tight"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.0, delay: 0.2 }}
@@ -199,7 +199,7 @@ export function Services() {
           viewport={{ once: true }}
         >
           <motion.h3 
-            className="text-4xl md:text-5xl font-inter font-light text-slate-900 mb-8 tracking-tight"
+            className="text-4xl md:text-5xl font-inter font-light text-amber-800 mb-8 tracking-tight"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.0, delay: 0.2 }}

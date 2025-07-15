@@ -69,7 +69,7 @@ export function Modal({
               {title && (
                 <div className="border-b border-slate-200 px-6 py-4">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-medium text-slate-900">
+                    <h3 className="text-lg font-medium text-amber-800">
                       {title}
                     </h3>
                     <button

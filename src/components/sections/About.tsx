@@ -32,7 +32,7 @@ export function About() {
               <span className="text-terracotta-500 font-medium uppercase tracking-wider text-sm">
                 Meet Victoria
               </span>
-              <h2 className="text-4xl md:text-5xl font-inter font-light text-slate-900 mt-4 mb-6 tracking-tight">
+              <h2 className="text-4xl md:text-5xl font-inter font-light text-amber-800 mt-4 mb-6 tracking-tight">
                 Nashville&apos;s Premier{' '}
                 <span className="italic text-sage font-normal">Frequency Healing</span>{' '}
                 Expert
@@ -95,7 +95,7 @@ export function About() {
               transition={{ duration: 1.0, delay: 0.8 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-sm font-medium text-slate-700 mb-4 uppercase tracking-wider">
+              <h3 className="text-sm font-medium text-amber-700 mb-4 uppercase tracking-wider">
                 Certifications & Expertise
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-600">

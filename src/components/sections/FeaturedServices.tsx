@@ -65,7 +65,7 @@ export function FeaturedServices() {
             Featured Healing Technologies
           </motion.span>
           <motion.h2 
-            className="text-4xl md:text-5xl font-inter font-light text-slate-900 mt-4 mb-6 tracking-tight"
+            className="text-4xl md:text-5xl font-inter font-light text-amber-800 mt-4 mb-6 tracking-tight"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.0, delay: 0.4 }}
@@ -106,7 +106,7 @@ export function FeaturedServices() {
                   <span className={`text-${service.color}-500 font-medium text-sm uppercase tracking-wider`}>
                     {service.tagline}
                   </span>
-                  <h3 className="text-3xl md:text-4xl font-inter font-light text-slate-900 mt-2 mb-4">
+                  <h3 className="text-3xl md:text-4xl font-inter font-light text-amber-800 mt-2 mb-4">
                     {service.name}
                   </h3>
                   <p className="text-lg text-slate-600 leading-relaxed">
@@ -116,7 +116,7 @@ export function FeaturedServices() {
 
                 {/* Benefits */}
                 <div>
-                  <h4 className="text-lg font-medium text-slate-700 mb-4">Key Benefits:</h4>
+                  <h4 className="text-lg font-medium text-amber-700 mb-4">Key Benefits:</h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {service.benefits.map((benefit, i) => (
                       <motion.div
@@ -139,7 +139,7 @@ export function FeaturedServices() {
                   <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                     <div>
                       <div className="text-sm text-slate-600 mb-1">Session Duration</div>
-                      <div className="font-medium text-slate-900">{service.duration}</div>
+                      <div className="font-medium text-amber-800">{service.duration}</div>
                     </div>
                     <div>
                       <div className="text-sm text-slate-600 mb-1">Investment</div>
@@ -211,7 +211,7 @@ export function FeaturedServices() {
           transition={{ duration: 1.0 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl md:text-3xl font-inter font-light text-slate-900 mb-6">
+          <h3 className="text-2xl md:text-3xl font-inter font-light text-amber-800 mb-6">
             Ready to Experience{' '}
             <span className="italic text-terracotta-500 font-normal">Revolutionary Healing</span>?
           </h3>

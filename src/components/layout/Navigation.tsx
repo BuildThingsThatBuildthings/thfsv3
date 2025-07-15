@@ -26,6 +26,7 @@ export function Navigation() {
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
     { label: 'Services', href: '/services' },
+    { label: 'Gallery', href: '/gallery' },
     { label: 'Testimonials', href: '/testimonials' },
     { label: 'Resources', href: '/resources' },
     { label: 'Contact', href: '/contact' }
@@ -51,7 +52,7 @@ export function Navigation() {
           {/* Business name - Haum Nashville inspired */}
           <Link 
             href="/" 
-            className="text-xl md:text-2xl font-light text-black tracking-wider hover:text-terracotta-500 transition-colors duration-200"
+            className="text-xl md:text-2xl font-light text-amber-800 tracking-wider hover:text-terracotta-500 transition-colors duration-200"
           >
             THE HEALING FREQUENCY SPACE
           </Link>

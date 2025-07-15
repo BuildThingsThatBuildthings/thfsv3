@@ -1,80 +1,98 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui";
 export function Hero() {
   const [videoLoaded, setVideoLoaded] = useState(false);
-  
+
   return (
     <section className="relative min-h-screen w-full overflow-hidden">
       {/* Healing frequency video background */}
-      <div className="absolute inset-0">
+      <div className="absolute top-0 left-0 right-0 bottom-48">
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full object-cover opacity-30 blur-sm"
+          className="w-full h-full object-cover opacity-100"
+          style={{ objectPosition: "top" }}
           onLoadedData={() => setVideoLoaded(true)}
           onError={() => setVideoLoaded(false)}
           poster="/images/placeholder.svg"
         >
-          <source src="/videos/healing-frequency-bg.mp4" type="video/mp4" />
+          <source src="/videos/thfs_hero2.mp4" type="video/mp4" />
         </video>
-        
+
         {/* Fallback background if video fails */}
         {!videoLoaded && (
-          <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-cream/80 to-sage/20" />
+          <div className="absolute inset-0 bg-gradient-to-b from-terracotta-400/60 via-warmGold/50 to-sage-500/40" />
         )}
-        
-        {/* Subtle white overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/70 to-white/60" />
+
+        {/* Minimal overlay for text readability only */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
       </div>
-      
-      {/* Content overlay */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-8 py-32">
+
+      {/* Content overlay with enhanced background */}
+      <div className="relative z-20 flex flex-col items-center justify-center min-h-screen text-center px-8 py-32">
         {/* Business name - Elegant spacing */}
-        <motion.h2 
-          className="text-sm md:text-base font-light text-slate-700 mb-24 tracking-[0.3em] uppercase"
+        <motion.h2
+          className="text-xl md:text-2xl lg:text-3xl font-semibold text-cream mb-24 tracking-[0.3em] uppercase"
+          style={{
+            textShadow:
+              "3px 3px 6px rgba(139, 69, 19, 0.8), 0 0 12px rgba(217, 119, 6, 0.6), 1px 1px 2px rgba(101, 63, 13, 0.9)",
+          }}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.3 }}
         >
           The Healing Frequency Space
         </motion.h2>
-        
+
         {/* Main hook with enhanced typography */}
         <motion.h1
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-inter font-light text-slate-900 mb-20 max-w-5xl leading-[1.1] tracking-tight"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-inter font-medium text-amber-50 mb-20 max-w-5xl leading-[1.1] tracking-tight"
+          style={{
+            textShadow:
+              "4px 4px 8px rgba(139, 69, 19, 0.9), 0 0 16px rgba(217, 119, 6, 0.7), 2px 2px 4px rgba(101, 63, 13, 1), 0 0 24px rgba(139, 69, 19, 0.5)",
+          }}
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.6 }}
         >
-          Have you ever wished for a{' '}
-          <span className="font-medium italic text-terracotta-600">true sanctuary</span>?
+          Step into a space where frequency becomes transformation.
         </motion.h1>
-        
+
         {/* Subtitle with more breathing room */}
         <motion.p
-          className="text-xl md:text-2xl text-slate-700 mb-24 max-w-3xl leading-relaxed font-light"
+          className="text-2xl md:text-3xl text-white mb-24 max-w-3xl leading-relaxed font-semibold"
+          style={{
+            textShadow:
+              "4px 4px 8px rgba(139, 69, 19, 1), 0 0 16px rgba(217, 119, 6, 0.8), 2px 2px 4px rgba(101, 63, 13, 1), 0 0 24px rgba(139, 69, 19, 0.6)",
+          }}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.9 }}
         >
-          A place to reset, recharge, and reconnect with your highest self through the transformative power of quantum.
+          Experience tailored frequencies guiding your healing journey to
+          optimal well-being.
         </motion.p>
-        
+
         {/* Tagline with elegant emphasis */}
         <motion.p
-          className="text-lg md:text-xl font-inter font-light text-terracotta-500 mb-32 tracking-wider uppercase"
+          className="text-xl md:text-2xl lg:text-3xl font-inter font-bold text-amber-100 mb-32 tracking-wider uppercase"
+          style={{
+            textShadow:
+              "4px 4px 8px rgba(139, 69, 19, 1), 0 0 16px rgba(217, 119, 6, 0.8), 2px 2px 4px rgba(101, 63, 13, 1), 0 0 20px rgba(139, 69, 19, 0.6)",
+          }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 1.2 }}
         >
-          Change Your Frequency, Change Everything
+          Elevate every cell—unite light, sound, and vibration for holistic
+          renewal
         </motion.p>
-        
+
         {/* CTA Buttons with elegant spacing */}
         <motion.div
           className="flex flex-col sm:flex-row gap-6 items-center mb-32"
@@ -90,17 +108,17 @@ export function Hero() {
           >
             Schedule an Appointment
           </Button>
-          
+
           <Button
             href="/about"
             variant="outline"
             size="lg"
-            className="text-lg px-12 py-5 bg-white/50 backdrop-blur-sm border-2 border-slate-300 text-slate-800 hover:bg-white/70 hover:border-slate-400 shadow-xl transition-all duration-300 hover:scale-105"
+            className="text-lg px-12 py-5 bg-white/90 backdrop-blur-md border-4 border-white text-amber-900 font-bold hover:bg-white hover:border-amber-200 hover:text-amber-800 shadow-2xl hover:shadow-white/60 transition-all duration-300 hover:scale-105 drop-shadow-lg"
           >
             Meet Victoria
           </Button>
         </motion.div>
-        
+
         {/* Trust indicators with elegant design */}
         <motion.div
           className="flex flex-col md:flex-row items-center gap-12 text-slate-600 text-sm"
@@ -114,14 +132,18 @@ export function Hero() {
           </div>
           <div className="flex items-center gap-3">
             <div className="w-1.5 h-1.5 bg-terracotta-500 rounded-full animate-pulse"></div>
-            <span className="tracking-wide">Nashville&apos;s Only Tesla Wellness Table</span>
+            <span className="tracking-wide">
+              Nashville&apos;s Only Tesla Wellness Table
+            </span>
           </div>
           <div className="flex items-center gap-3">
             <div className="w-1.5 h-1.5 bg-terracotta-500 rounded-full animate-pulse"></div>
-            <span className="tracking-wide">Certified Holistic Practitioner</span>
+            <span className="tracking-wide">
+              Certified Holistic Practitioner
+            </span>
           </div>
         </motion.div>
-        
+
         {/* Scroll indicator */}
         <motion.div
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
@@ -130,7 +152,9 @@ export function Hero() {
           transition={{ duration: 1.2, delay: 2.1 }}
         >
           <div className="flex flex-col items-center gap-2">
-            <span className="text-slate-500 text-xs uppercase tracking-wider font-light">Scroll to Explore</span>
+            <span className="text-slate-500 text-xs uppercase tracking-wider font-light">
+              Scroll to Explore
+            </span>
             <motion.div
               className="w-6 h-10 border-2 border-slate-400 rounded-full flex justify-center"
               animate={{
@@ -139,7 +163,7 @@ export function Hero() {
               transition={{
                 duration: 2,
                 repeat: Infinity,
-                ease: "easeInOut"
+                ease: "easeInOut",
               }}
             >
               <motion.div
@@ -150,7 +174,7 @@ export function Hero() {
                 transition={{
                   duration: 2,
                   repeat: Infinity,
-                  ease: "easeInOut"
+                  ease: "easeInOut",
                 }}
               />
             </motion.div>

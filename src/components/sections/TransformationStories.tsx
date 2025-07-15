@@ -69,7 +69,7 @@ export function TransformationStories() {
             Real Stories, Real Transformations
           </motion.span>
           <motion.h2 
-            className="text-4xl md:text-5xl font-inter font-light text-slate-900 mt-4 mb-6 tracking-tight"
+            className="text-4xl md:text-5xl font-inter font-light text-amber-800 mt-4 mb-6 tracking-tight"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.0, delay: 0.4 }}
@@ -145,7 +145,7 @@ export function TransformationStories() {
               </div>
               
               {/* Quote */}
-              <blockquote className="text-xl md:text-2xl text-slate-700 leading-relaxed font-light italic mb-8">
+              <blockquote className="text-xl md:text-2xl text-amber-700 leading-relaxed font-light italic mb-8">
                 &quot;{transformationStories[activeStory].story}&quot;
               </blockquote>
               
@@ -153,7 +153,7 @@ export function TransformationStories() {
               <div className="border-t border-sage/20 pt-6">
                 <div className="flex flex-col md:flex-row items-center justify-center gap-8">
                   <div className="text-center md:text-left">
-                    <div className="font-medium text-lg text-slate-900">
+                    <div className="font-medium text-lg text-amber-800">
                       {transformationStories[activeStory].name}
                     </div>
                     <div className="text-slate-600">
@@ -167,7 +167,7 @@ export function TransformationStories() {
                     <div className="text-sm text-slate-500 uppercase tracking-wider mb-1">
                       Treatment
                     </div>
-                    <div className="font-medium text-slate-700">
+                    <div className="font-medium text-amber-700">
                       {transformationStories[activeStory].service}
                     </div>
                   </div>
@@ -238,7 +238,7 @@ export function TransformationStories() {
           transition={{ duration: 1.0 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-inter font-light text-slate-900 mb-6">
+          <h3 className="text-2xl font-inter font-light text-amber-800 mb-6">
             Ready to Write{' '}
             <span className="italic text-terracotta-500 font-normal">Your Transformation Story</span>?
           </h3>

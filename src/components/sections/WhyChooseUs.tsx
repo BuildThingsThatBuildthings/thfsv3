@@ -70,7 +70,7 @@ export function WhyChooseUs() {
             Why The Healing Frequency Space
           </motion.span>
           <motion.h2 
-            className="text-4xl md:text-5xl font-inter font-light text-slate-900 mt-4 mb-6 tracking-tight"
+            className="text-4xl md:text-5xl font-inter font-light text-amber-800 mt-4 mb-6 tracking-tight"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.0, delay: 0.4 }}
@@ -116,7 +116,7 @@ export function WhyChooseUs() {
               </motion.div>
               
               {/* Content */}
-              <h3 className="text-xl font-inter font-medium text-slate-900 mb-3 group-hover:text-terracotta-500 transition-colors duration-300">
+              <h3 className="text-xl font-inter font-medium text-amber-800 mb-3 group-hover:text-terracotta-500 transition-colors duration-300">
                 {prop.title}
               </h3>
               <p className="text-slate-600 mb-4 leading-relaxed">
@@ -141,7 +141,7 @@ export function WhyChooseUs() {
           viewport={{ once: true }}
         >
           <div className="text-center mb-8">
-            <h3 className="text-2xl md:text-3xl font-inter font-light text-slate-900 mb-4">
+            <h3 className="text-2xl md:text-3xl font-inter font-light text-amber-800 mb-4">
               Trusted{' '}
               <span className="italic text-terracotta-500 font-normal">Credentials</span>{' '}
               & Certifications
@@ -169,7 +169,7 @@ export function WhyChooseUs() {
                 <div className="w-12 h-12 bg-gradient-to-r from-terracotta-500 to-sage rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-xl">✓</span>
                 </div>
-                <h4 className="font-medium text-slate-700 text-sm leading-tight">
+                <h4 className="font-medium text-amber-700 text-sm leading-tight">
                   {credential}
                 </h4>
               </motion.div>
@@ -185,7 +185,7 @@ export function WhyChooseUs() {
           transition={{ duration: 1.0 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl md:text-3xl font-inter font-light text-slate-900 mb-6">
+          <h3 className="text-2xl md:text-3xl font-inter font-light text-amber-800 mb-6">
             Experience the{' '}
             <span className="italic text-sage font-normal">Difference</span>{' '}
             for Yourself
