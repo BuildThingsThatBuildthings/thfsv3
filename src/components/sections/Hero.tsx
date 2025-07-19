@@ -9,20 +9,25 @@ export function Hero() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden">
       {/* Healing frequency video background */}
-      <div className="absolute top-0 left-0 right-0 bottom-48">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-cover opacity-100"
-          style={{ objectPosition: "top" }}
-          onLoadedData={() => setVideoLoaded(true)}
-          onError={() => setVideoLoaded(false)}
-          poster="/images/placeholder.svg"
-        >
-          <source src="/videos/thfs_hero2.mp4" type="video/mp4" />
-        </video>
+      <div className="absolute inset-0">
+        <div className="relative w-full h-full overflow-hidden">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-[calc(100%+4in)] object-cover opacity-100"
+            style={{ 
+              objectPosition: "top",
+              transform: "translateY(0)"
+            }}
+            onLoadedData={() => setVideoLoaded(true)}
+            onError={() => setVideoLoaded(false)}
+            poster="/images/placeholder.svg"
+          >
+            <source src="/videos/thfs_hero2.mp4" type="video/mp4" />
+          </video>
+        </div>
 
         {/* Fallback background if video fails */}
         {!videoLoaded && (
@@ -121,65 +126,35 @@ export function Hero() {
 
         {/* Trust indicators with elegant design */}
         <motion.div
-          className="flex flex-col md:flex-row items-center gap-12 text-slate-600 text-sm"
+          className="flex flex-col md:flex-row items-center gap-12 text-white text-sm font-medium"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 1.8 }}
         >
           <div className="flex items-center gap-3">
-            <div className="w-1.5 h-1.5 bg-terracotta-500 rounded-full animate-pulse"></div>
-            <span className="tracking-wide">30+ Years Experience</span>
+            <div className="w-2 h-2 bg-warmGold-400 rounded-full animate-pulse shadow-md"></div>
+            <span className="tracking-wide" style={{
+              textShadow: "2px 2px 6px rgba(0, 0, 0, 0.8), 1px 1px 3px rgba(139, 69, 19, 0.6), 0 0 10px rgba(0, 0, 0, 0.5)"
+            }}>30+ Years Experience</span>
           </div>
           <div className="flex items-center gap-3">
-            <div className="w-1.5 h-1.5 bg-terracotta-500 rounded-full animate-pulse"></div>
-            <span className="tracking-wide">
+            <div className="w-2 h-2 bg-warmGold-400 rounded-full animate-pulse shadow-md"></div>
+            <span className="tracking-wide" style={{
+              textShadow: "2px 2px 6px rgba(0, 0, 0, 0.8), 1px 1px 3px rgba(139, 69, 19, 0.6), 0 0 10px rgba(0, 0, 0, 0.5)"
+            }}>
               Nashville&apos;s Only Tesla Wellness Table
             </span>
           </div>
           <div className="flex items-center gap-3">
-            <div className="w-1.5 h-1.5 bg-terracotta-500 rounded-full animate-pulse"></div>
-            <span className="tracking-wide">
+            <div className="w-2 h-2 bg-warmGold-400 rounded-full animate-pulse shadow-md"></div>
+            <span className="tracking-wide" style={{
+              textShadow: "2px 2px 6px rgba(0, 0, 0, 0.8), 1px 1px 3px rgba(139, 69, 19, 0.6), 0 0 10px rgba(0, 0, 0, 0.5)"
+            }}>
               Certified Holistic Practitioner
             </span>
           </div>
         </motion.div>
 
-        {/* Scroll indicator */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 2.1 }}
-        >
-          <div className="flex flex-col items-center gap-2">
-            <span className="text-slate-500 text-xs uppercase tracking-wider font-light">
-              Scroll to Explore
-            </span>
-            <motion.div
-              className="w-6 h-10 border-2 border-slate-400 rounded-full flex justify-center"
-              animate={{
-                opacity: [1, 0.5, 1],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              <motion.div
-                className="w-1 h-3 bg-slate-500 rounded-full mt-2"
-                animate={{
-                  y: [0, 12, 0],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
-            </motion.div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

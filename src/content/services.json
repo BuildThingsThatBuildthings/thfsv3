@@ -16,19 +16,19 @@
       "durations": [
         {
           "minutes": 20,
-          "price": 50,
+          "price": 55,
           "description": "Introduction session",
           "isPopular": false
         },
         {
           "minutes": 30,
-          "price": 75,
+          "price": 80,
           "description": "Standard session",
           "isPopular": true
         },
         {
           "minutes": 40,
-          "price": 100,
+          "price": 105,
           "description": "Extended session"
         },
         {
@@ -43,24 +43,24 @@
           "sessionCount": 4,
           "discountPercent": 15,
           "expirationDays": 90,
-          "totalPrice": 255,
-          "savings": 45
+          "totalPrice": 272,
+          "savings": 48
         },
         {
           "id": "tesla-8-pack",
           "sessionCount": 8,
           "discountPercent": 20,
           "expirationDays": 180,
-          "totalPrice": 480,
-          "savings": 120
+          "totalPrice": 512,
+          "savings": 128
         },
         {
           "id": "tesla-10-pack",
           "sessionCount": 10,
           "discountPercent": 25,
           "expirationDays": 365,
-          "totalPrice": 562,
-          "savings": 188
+          "totalPrice": 600,
+          "savings": 200
         }
       ],
       "imageUrl": "/images/services/tesla-table.jpg",
@@ -82,13 +82,13 @@
       "durations": [
         {
           "minutes": 25,
-          "price": 60,
+          "price": 50,
           "description": "Intro journey",
           "isPopular": true
         },
         {
           "minutes": 45,
-          "price": 90,
+          "price": 75,
           "description": "Deep journey"
         }
       ],
@@ -96,18 +96,10 @@
         {
           "id": "roxiva-4-pack",
           "sessionCount": 4,
-          "discountPercent": 15,
+          "discountPercent": 10,
           "expirationDays": 90,
-          "totalPrice": 204,
-          "savings": 36
-        },
-        {
-          "id": "roxiva-8-pack",
-          "sessionCount": 8,
-          "discountPercent": 20,
-          "expirationDays": 180,
-          "totalPrice": 384,
-          "savings": 96
+          "totalPrice": 180,
+          "savings": 20
         }
       ],
       "imageUrl": "/images/services/roxiva.jpg",

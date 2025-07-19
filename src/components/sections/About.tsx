@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { Button } from '@/components/ui';
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { Button } from "@/components/ui";
 
 export function About() {
   return (
@@ -12,7 +12,7 @@ export function About() {
         <div className="absolute top-20 left-10 w-32 h-32 bg-sage/5 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-10 w-40 h-40 bg-gold/5 rounded-full blur-3xl" />
       </div>
-      
+
       <div className="relative max-w-7xl mx-auto px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Content Side */}
@@ -33,12 +33,14 @@ export function About() {
                 Meet Victoria
               </span>
               <h2 className="text-4xl md:text-5xl font-inter font-light text-amber-800 mt-4 mb-6 tracking-tight">
-                Nashville&apos;s Premier{' '}
-                <span className="italic text-sage font-normal">Frequency Healing</span>{' '}
+                Nashville&apos;s Premier{" "}
+                <span className="italic text-sage font-normal">
+                  Frequency Healing
+                </span>{" "}
                 Expert
               </h2>
             </motion.div>
-            
+
             <motion.div
               className="space-y-6 text-lg text-slate-600 leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
@@ -47,21 +49,23 @@ export function About() {
               viewport={{ once: true }}
             >
               <p>
-                With over 30 years of experience in holistic healing, Victoria has dedicated her life 
-                to helping others find their path to wellness through the transformative power of 
-                frequency healing.
+                With over 30 years of experience in holistic healing, Victoria
+                has dedicated her life to helping others find their path to
+                wellness through the transformative power of frequency healing.
               </p>
               <p>
-                As Nashville&apos;s only certified practitioner offering Tesla Wellness Table and RoXiva 
-                light therapy sessions, Victoria combines cutting-edge technology with time-tested 
-                healing wisdom to create truly personalized healing experiences.
+                As Nashville&apos;s only certified practitioner offering Tesla
+                Wellness Table and RoXiva light therapy sessions, Victoria
+                combines cutting-edge technology with time-tested healing wisdom
+                to create truly personalized healing experiences.
               </p>
               <p>
-                Her approach integrates kinesiology, energy healing, and advanced frequency technologies 
-                to address not just symptoms, but the root causes of imbalance in your life.
+                Her approach integrates kinesiology, energy healing, and
+                advanced frequency technologies to address not just symptoms,
+                but the root causes of imbalance in your life.
               </p>
             </motion.div>
-            
+
             <motion.div
               className="flex flex-col sm:flex-row gap-4"
               initial={{ opacity: 0, y: 30 }}
@@ -86,7 +90,7 @@ export function About() {
                 Book a Consultation
               </Button>
             </motion.div>
-            
+
             {/* Credentials */}
             <motion.div
               className="pt-8 border-t border-sage/20"
@@ -118,7 +122,7 @@ export function About() {
               </div>
             </motion.div>
           </motion.div>
-          
+
           {/* Image Side */}
           <motion.div
             className="relative"
@@ -138,20 +142,31 @@ export function About() {
               <div className="absolute inset-0 bg-gradient-to-t from-sage/20 via-transparent to-transparent" />
             </div>
             
+            {/* Image Caption */}
+            <div className="text-right mt-4">
+              <p className="text-sm text-slate-600 italic">
+                Victoria with Tesla Quantum Wellness table inventor Paul Esch
+              </p>
+            </div>
+
             {/* Floating stats */}
             <motion.div
-              className="absolute -bottom-6 -left-6 bg-white/95 backdrop-blur-sm rounded-lg p-6 shadow-xl border border-sage/10"
+              className="absolute -bottom-16 -left-6 bg-white/95 backdrop-blur-sm rounded-lg p-6 shadow-xl border border-sage/10"
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.0, delay: 1.0 }}
               viewport={{ once: true }}
             >
               <div className="text-center">
-                <div className="text-3xl font-inter font-light text-terracotta-500 mb-1">30+</div>
-                <div className="text-sm text-slate-600 font-medium">Years Experience</div>
+                <div className="text-3xl font-inter font-light text-terracotta-500 mb-1">
+                  30+
+                </div>
+                <div className="text-sm text-slate-600 font-medium">
+                  Years Experience
+                </div>
               </div>
             </motion.div>
-            
+
             <motion.div
               className="absolute -top-6 -right-6 bg-white/95 backdrop-blur-sm rounded-lg p-6 shadow-xl border border-sage/10"
               initial={{ opacity: 0, scale: 0.8 }}
@@ -160,8 +175,12 @@ export function About() {
               viewport={{ once: true }}
             >
               <div className="text-center">
-                <div className="text-3xl font-inter font-light text-sage mb-1">1000+</div>
-                <div className="text-sm text-slate-600 font-medium">Lives Transformed</div>
+                <div className="text-3xl font-inter font-light text-sage mb-1">
+                  1000+
+                </div>
+                <div className="text-sm text-slate-600 font-medium">
+                  Lives Transformed
+                </div>
               </div>
             </motion.div>
           </motion.div>

@@ -6,12 +6,12 @@ import { useState } from 'react';
 const transformationStories = [
   {
     id: 1,
-    name: 'Sarah M.',
-    location: 'Nashville, TN',
-    condition: 'Chronic Fatigue & Stress',
+    name: 'James B.',
+    location: 'Franklin, TN',
+    condition: 'Family Wellness Experience',
     service: 'Tesla Wellness Table',
-    story: 'After struggling with chronic fatigue for years, I was skeptical about frequency healing. But after just three sessions with Victoria\'s Tesla Wellness Table, I felt a profound shift. My energy returned, my sleep improved, and I finally felt like myself again.',
-    result: 'Complete energy restoration in 6 weeks',
+    story: 'Thank you so much for inviting my wife, my daughter, and me to your home. We truly appreciated your warm hospitality and all the valuable insights you shared with us. It was a delightful experience, and we left with a sense of joy and positivity. We\'re especially grateful for the opportunity to sit at the Tesla table. We felt energized and inspired by the wonderful atmosphere you created. Your home exudes a welcoming spirit, and we left with high spirits and a renewed sense of purpose.',
+    result: 'Family left energized with renewed purpose',
     rating: 5,
     image: '/images/placeholder.svg'
   },
