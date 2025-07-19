@@ -9,25 +9,20 @@ export function Hero() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden">
       {/* Healing frequency video background */}
-      <div className="absolute inset-0 z-0">
-        <div className="relative w-full h-full overflow-hidden">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="absolute inset-0 w-full h-[calc(100%+4in)] object-cover opacity-100"
-            style={{ 
-              objectPosition: "top",
-              transform: "translateY(0)"
-            }}
-            onLoadedData={() => setVideoLoaded(true)}
-            onError={() => setVideoLoaded(false)}
-            poster="/images/placeholder.svg"
-          >
-            <source src="/videos/thfs_hero2.mp4" type="video/mp4" />
-          </video>
-        </div>
+      <div className="absolute top-0 left-0 right-0 bottom-48">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover opacity-100"
+          style={{ objectPosition: "top" }}
+          onLoadedData={() => setVideoLoaded(true)}
+          onError={() => setVideoLoaded(false)}
+          poster="/images/placeholder.svg"
+        >
+          <source src="/videos/thfs_hero2.mp4" type="video/mp4" />
+        </video>
 
         {/* Fallback background if video fails */}
         {!videoLoaded && (
