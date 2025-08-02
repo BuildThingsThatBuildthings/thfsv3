@@ -9,7 +9,7 @@ export function Hero() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden">
       {/* Healing frequency video background */}
-      <div className="absolute top-0 left-0 right-0 bottom-48">
+      <div className="absolute inset-0 z-0">
         <video
           autoPlay
           muted
