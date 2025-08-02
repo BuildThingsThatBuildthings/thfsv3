@@ -130,7 +130,7 @@ export function Hero() {
             <div className="w-2 h-2 bg-warmGold-400 rounded-full animate-pulse shadow-md"></div>
             <span className="tracking-wide" style={{
               textShadow: "2px 2px 6px rgba(0, 0, 0, 0.8), 1px 1px 3px rgba(139, 69, 19, 0.6), 0 0 10px rgba(0, 0, 0, 0.5)"
-            }}>30+ Years Experience</span>
+            }}>Reiki Master & Herbalist</span>
           </div>
           <div className="flex items-center gap-3">
             <div className="w-2 h-2 bg-warmGold-400 rounded-full animate-pulse shadow-md"></div>
@@ -145,7 +145,7 @@ export function Hero() {
             <span className="tracking-wide" style={{
               textShadow: "2px 2px 6px rgba(0, 0, 0, 0.8), 1px 1px 3px rgba(139, 69, 19, 0.6), 0 0 10px rgba(0, 0, 0, 0.5)"
             }}>
-              Certified Holistic Practitioner
+              Energy Medicine Specialist
             </span>
           </div>
         </motion.div>

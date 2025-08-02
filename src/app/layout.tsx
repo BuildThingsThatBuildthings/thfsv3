@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     default: 'The Healing Frequency Space | Nashville Frequency Healing',
     template: '%s | The Healing Frequency Space'
   },
-  description: 'Nashville\'s premier destination for frequency-based healing. Transform your well-being with Tesla Wellness Table and RoXiva light therapy sessions. Change Your Frequency, Change Everything.',
+  description: 'Founded by Reiki Master and herbalist Victoria, The Healing Frequency Space offers transformative wellness experiences combining Tesla Wellness Table, RoXiva light therapy, and holistic herbal consultations. Change Your Frequency, Change Everything.',
   keywords: [
     'frequency healing Nashville',
     'Tesla wellness table Tennessee',
@@ -29,7 +29,11 @@ export const metadata: Metadata = {
     'energy healing Nashville',
     'wellness center Nashville',
     'Victoria frequency healing',
-    'bioenergetic healing Tennessee'
+    'bioenergetic healing Tennessee',
+    'Reiki Master Nashville',
+    'herbalism consultation Nashville',
+    'energy medicine specialist',
+    'holistic herbalist Tennessee'
   ],
   authors: [{ name: 'Victoria, The Healing Frequency Space' }],
   creator: 'The Healing Frequency Space',

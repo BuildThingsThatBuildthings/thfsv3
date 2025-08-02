@@ -166,6 +166,58 @@
       ],
       "imageUrl": "/images/services/remote.jpg",
       "category": "remote"
+    },
+    {
+      "id": "herbalism",
+      "name": "herbalism",
+      "displayName": "Herbal Wellness Consultation",
+      "description": "Discover the healing power of plants with Victoria's expert herbalism consultations. Drawing from her master certification studies at the National Health Institute in Maui, Victoria creates personalized herbal protocols that work synergistically with your body's natural healing processes.",
+      "benefits": [
+        "Personalized herbal remedy recommendations",
+        "Natural support for chronic conditions",
+        "Plant-based nutritional guidance",
+        "Integration with frequency healing modalities",
+        "Education on herbal preparation methods",
+        "Holistic approach combining herbs with energy medicine"
+      ],
+      "durations": [
+        {
+          "minutes": 60,
+          "price": 95,
+          "description": "Initial herbal consultation",
+          "isPopular": true
+        },
+        {
+          "minutes": 30,
+          "price": 50,
+          "description": "Follow-up consultation"
+        },
+        {
+          "minutes": 90,
+          "price": 135,
+          "description": "Comprehensive wellness plan"
+        }
+      ],
+      "packages": [
+        {
+          "id": "herbalism-3-pack",
+          "sessionCount": 3,
+          "discountPercent": 10,
+          "expirationDays": 90,
+          "totalPrice": 256,
+          "savings": 29
+        },
+        {
+          "id": "herbalism-wellness-journey",
+          "sessionCount": 6,
+          "discountPercent": 15,
+          "expirationDays": 180,
+          "totalPrice": 484,
+          "savings": 86
+        }
+      ],
+      "imageUrl": "/images/services/herbalism.jpg",
+      "category": "in-person"
     }
   ]
 }

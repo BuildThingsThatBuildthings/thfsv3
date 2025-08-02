@@ -33,11 +33,10 @@ export function About() {
                 Meet Victoria
               </span>
               <h2 className="text-4xl md:text-5xl font-inter font-light text-amber-800 mt-4 mb-6 tracking-tight">
-                Nashville&apos;s Premier{" "}
+                Founder of{" "}
                 <span className="italic text-sage font-normal">
-                  Frequency Healing
-                </span>{" "}
-                Expert
+                  The Healing Frequency Space
+                </span>
               </h2>
             </motion.div>
 
@@ -49,20 +48,47 @@ export function About() {
               viewport={{ once: true }}
             >
               <p>
-                With over 30 years of experience in holistic healing, Victoria
-                has dedicated her life to helping others find their path to
-                wellness through the transformative power of frequency healing.
+                Victoria is the founder of The Healing Frequency Space, where
+                she blends decades of experience in holistic healing, energy
+                work, and the creative arts to support clients on their wellness
+                journeys. She holds a BFA in Fine Arts from The George
+                Washington University and began her professional path in Los
+                Angeles, working in the natural health industry while selling
+                her art on commission. During this time, she received training
+                in nutritional supplementation and basic nutrition.
               </p>
               <p>
-                As Nashville&apos;s only certified practitioner offering Tesla
-                Wellness Table and RoXiva light therapy sessions, Victoria
-                combines cutting-edge technology with time-tested healing wisdom
-                to create truly personalized healing experiences.
+                Raised in the Greek Orthodox faith, Victoria&apos;s earliest
+                spiritual influences came from her grandmother, whose guidance
+                and presence instilled in her a deep sense of devotion and
+                reverence for the unseen. This spiritual foundation was later
+                enriched through her immersion in various forms of meditation,
+                beginning in the early 1990s, where she studied with prominent
+                teachers and integrated advanced contemplative practices into
+                her daily life. In 1994, a transformative meeting with an
+                internationally renowned spiritual leader sparked a powerful
+                awakening experience that profoundly shaped her spiritual
+                journey.
               </p>
               <p>
-                Her approach integrates kinesiology, energy healing, and
-                advanced frequency technologies to address not just symptoms,
-                but the root causes of imbalance in your life.
+                While raising two children, Victoria became a Reiki Master,
+                studied energy medicine, and built a successful decorative
+                design and real estate career. She is currently completing a
+                master certification in herbalism from the National Health
+                Institute in Maui, Hawaii, further expanding her expertise in
+                natural health and plant-based remedies. Throughout her journey,
+                Victoria has drawn inspiration from universal ideals of love,
+                compassion, and forgiveness, which continue to shape her
+                approach to healing and connection.
+              </p>
+              <p>
+                Victoria&apos;s passion for higher consciousness and holistic living
+                led her to open The Healing Frequency Space, where she now
+                offers advanced energy frequency therapies using Rife &
+                Solfeggio frequencies, Nikola Tesla technology with the Tesla
+                Wellness Table, and RoXiva light therapy. Her integrative
+                approach empowers clients to experience profound transformation
+                in body, mind, and soul.
               </p>
             </motion.div>
 
@@ -90,37 +116,6 @@ export function About() {
                 Book a Consultation
               </Button>
             </motion.div>
-
-            {/* Credentials */}
-            <motion.div
-              className="pt-8 border-t border-sage/20"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, delay: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-sm font-medium text-amber-700 mb-4 uppercase tracking-wider">
-                Certifications & Expertise
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-600">
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-gold rounded-full" />
-                  <span>Certified Holistic Practitioner</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-gold rounded-full" />
-                  <span>Kinesiology Specialist</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-gold rounded-full" />
-                  <span>Tesla Wellness Certified</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-gold rounded-full" />
-                  <span>RoXiva Light Therapy</span>
-                </div>
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* Image Side */}
@@ -133,56 +128,15 @@ export function About() {
           >
             <div className="relative aspect-[4/5] rounded-lg overflow-hidden shadow-2xl">
               <Image
-                src="/images/victoria-healing-expert.jpeg"
-                alt="Victoria - The Healing Frequency Space founder and practitioner"
+                src="/images/victoria-colorful-chair.jpg"
+                alt="Victoria - The Healing Frequency Space founder sitting in a vibrant colorful chair"
                 fill
                 className="object-cover"
+                priority
               />
               {/* Elegant overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-sage/20 via-transparent to-transparent" />
             </div>
-            
-            {/* Image Caption */}
-            <div className="text-right mt-4">
-              <p className="text-sm text-slate-600 italic">
-                Victoria with Tesla Quantum Wellness table inventor Paul Esch
-              </p>
-            </div>
-
-            {/* Floating stats */}
-            <motion.div
-              className="absolute -bottom-16 -left-6 bg-white/95 backdrop-blur-sm rounded-lg p-6 shadow-xl border border-sage/10"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.0, delay: 1.0 }}
-              viewport={{ once: true }}
-            >
-              <div className="text-center">
-                <div className="text-3xl font-inter font-light text-terracotta-500 mb-1">
-                  30+
-                </div>
-                <div className="text-sm text-slate-600 font-medium">
-                  Years Experience
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="absolute -top-6 -right-6 bg-white/95 backdrop-blur-sm rounded-lg p-6 shadow-xl border border-sage/10"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.0, delay: 1.2 }}
-              viewport={{ once: true }}
-            >
-              <div className="text-center">
-                <div className="text-3xl font-inter font-light text-sage mb-1">
-                  1000+
-                </div>
-                <div className="text-sm text-slate-600 font-medium">
-                  Lives Transformed
-                </div>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </div>

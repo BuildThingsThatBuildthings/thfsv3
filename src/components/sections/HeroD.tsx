@@ -6,7 +6,7 @@ import { Button } from '@/components/ui';
 
 export function HeroD() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number>(0);
   const [portalHovered, setPortalHovered] = useState(false);
   const [scrollY, setScrollY] = useState(0);
 
@@ -269,7 +269,7 @@ export function HeroD() {
                  fontFamily: "'Inter', sans-serif",
                  fontWeight: 300
                }}>
-              Experience profound healing in Nashville's most advanced wellness sanctuary.
+              Experience profound healing in Nashville&apos;s most advanced wellness sanctuary.
             </p>
           </motion.div>
 
@@ -284,12 +284,7 @@ export function HeroD() {
               href="/booking"
               variant="primary"
               size="lg"
-              className="bg-terracotta-500 hover:bg-terracotta-600 text-white font-light text-lg px-16 py-6 rounded-none border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-              style={{ 
-                fontFamily: "'Inter', sans-serif",
-                fontWeight: 300,
-                letterSpacing: '0.05em'
-              }}
+              className="bg-terracotta-500 hover:bg-terracotta-600 text-white font-light text-lg px-16 py-6 rounded-none border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 font-inter font-light tracking-wider"
             >
               SCHEDULE NOW
             </Button>
@@ -297,12 +292,7 @@ export function HeroD() {
               href="/gallery"
               variant="outline"
               size="lg"
-              className="border border-amber-400 text-amber-700 hover:text-amber-900 hover:border-amber-600 bg-transparent hover:bg-transparent font-light text-lg px-16 py-6 rounded-none shadow-none hover:shadow-none transition-all duration-300 transform hover:-translate-y-1"
-              style={{ 
-                fontFamily: "'Inter', sans-serif",
-                fontWeight: 300,
-                letterSpacing: '0.05em'
-              }}
+              className="border border-amber-400 text-amber-700 hover:text-amber-900 hover:border-amber-600 bg-transparent hover:bg-transparent font-light text-lg px-16 py-6 rounded-none shadow-none hover:shadow-none transition-all duration-300 transform hover:-translate-y-1 font-inter font-light tracking-wider"
             >
               LEARN MORE
             </Button>

@@ -182,7 +182,7 @@ export default function GalleryPage() {
             </h2>
             <p className="text-slate-600 mb-8 max-w-2xl mx-auto">
               Have photos from your Tesla Table sessions or want to connect with other practitioners? 
-              We'd love to feature your healing story in our gallery.
+              We&apos;d love to feature your healing story in our gallery.
             </p>
             <button className="bg-terracotta-500 text-white px-8 py-3 rounded-lg hover:bg-terracotta-600 transition-colors duration-300">
               Contact Us to Share

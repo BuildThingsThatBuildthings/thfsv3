@@ -128,10 +128,7 @@ export function HeroB() {
             href="/booking"
             variant="primary"
             size="lg"
-            className="text-lg px-12 py-5 shadow-2xl hover:shadow-terracotta-500/40 transition-all duration-300 hover:scale-105 bg-terracotta-600 hover:bg-terracotta-700"
-            style={{
-              boxShadow: '0 10px 30px rgba(234, 88, 12, 0.3), 0 0 60px rgba(234, 88, 12, 0.2)'
-            }}
+            className="text-lg px-12 py-5 shadow-2xl hover:shadow-terracotta-500/40 transition-all duration-300 hover:scale-105 bg-terracotta-600 hover:bg-terracotta-700 [box-shadow:0_10px_30px_rgba(234,88,12,0.3),0_0_60px_rgba(234,88,12,0.2)]"
           >
             Schedule an Appointment
           </Button>
