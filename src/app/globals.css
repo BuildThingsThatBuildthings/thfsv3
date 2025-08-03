@@ -148,6 +148,49 @@
   }
 }
 
+/* Ensure content is visible even if JavaScript fails to load */
+body {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Comprehensive fallback for motion elements in case Framer Motion doesn't load */
+/* These styles will be overridden by JavaScript when it loads */
+*[style*="opacity:0"] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Specific fallbacks for inline styles that may not be caught */
+*[style*="translateY"] {
+  transform: none !important;
+}
+
+*[style*="translateX"] {
+  transform: none !important;
+}
+
+*[style*="scale(0"] {
+  transform: scale(1) !important;
+}
+
+/* Specific fixes for common animation patterns */
+section, div, h1, h2, h3, p, span, img, button, a {
+  opacity: 1 !important;
+}
+
+/* Navigation should always be visible */
+nav {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Force visibility for all content areas */
+main section > * {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
 /* Accessibility improvements */
 @media (prefers-reduced-motion: reduce) {
   *,

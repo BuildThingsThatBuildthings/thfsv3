@@ -70,7 +70,7 @@
       "id": "roxiva",
       "name": "roxiva",
       "displayName": "RoXiva Light Therapy",
-      "description": "Journey into transformative states of consciousness with RoXiva's advanced light and sound technology. This immersive experience uses precisely calibrated frequencies to guide your brain into therapeutic states for deep healing and personal insight.",
+      "description": "Journey into transformative states of consciousness with RoXiva's advanced light and sound technology. This immersive experience uses precisely calibrated frequencies to guide your brain into therapeutic states for deep healing and personal insight. Sessions starting at just 7 minutes make this accessible for any schedule.",
       "benefits": [
         "Reduces anxiety and depression",
         "Enhances meditation and mindfulness",
@@ -81,15 +81,21 @@
       ],
       "durations": [
         {
+          "minutes": 7,
+          "price": 25,
+          "description": "Quick intro session",
+          "isPopular": false
+        },
+        {
           "minutes": 25,
           "price": 50,
-          "description": "Intro journey",
+          "description": "Standard journey",
           "isPopular": true
         },
         {
           "minutes": 45,
           "price": 75,
-          "description": "Deep journey"
+          "description": "Deep transformation journey"
         }
       ],
       "packages": [
@@ -133,14 +139,17 @@
       "id": "remote",
       "name": "remote",
       "displayName": "Remote Frequency Sessions",
-      "description": "Experience the power of distance healing through our remote frequency sessions. Using advanced quantum field technology, Victoria can provide personalized frequency healing from anywhere in the world.",
+      "description": "Experience the power of distance healing through our remote frequency sessions. Using advanced quantum field technology, Victoria can provide personalized frequency healing from anywhere in the world. These sessions include EMF and radiation mitigation benefits, creating a protective healing field that extends to you and your pets.",
       "benefits": [
         "Convenient healing from home",
         "Personalized frequency protocols",
         "Quantum field technology",
         "Virtual consultation included",
         "Ongoing support and guidance",
-        "Flexible scheduling options"
+        "Flexible scheduling options",
+        "EMF and radiation protection",
+        "Pet healing capabilities",
+        "Family-wide healing benefits"
       ],
       "durations": [
         {

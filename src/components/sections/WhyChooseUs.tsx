@@ -7,7 +7,7 @@ const valuePropositions = [
   {
     icon: '⚡',
     title: 'Exclusive Technologies',
-    description: 'Nashville\'s only Tesla Wellness Table and advanced RoXiva light therapy systems.',
+    description: 'Nashville\'s first Tesla Quantum Table and advanced RoXiva light therapy systems.',
     details: 'Access cutting-edge healing technologies available nowhere else in Middle Tennessee.'
   },
   {
@@ -76,9 +76,9 @@ export function WhyChooseUs() {
             transition={{ duration: 1.0, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            Nashville&apos;s Most{' '}
-            <span className="italic text-sage font-normal">Trusted</span>{' '}
-            Healing Sanctuary
+            Experience{' '}
+            <span className="italic text-sage font-normal">Advanced</span>{' '}
+            Frequency Healing
           </motion.h2>
           <motion.p 
             className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed"
@@ -87,8 +87,8 @@ export function WhyChooseUs() {
             transition={{ duration: 1.0, delay: 0.6 }}
             viewport={{ once: true }}
           >
-            Discover what sets us apart and why discerning clients choose The Healing Frequency Space 
-            for their transformation journey.
+            Discover advanced healing technologies and personalized care designed 
+            for your unique transformation journey.
           </motion.p>
         </motion.div>
 
@@ -131,51 +131,6 @@ export function WhyChooseUs() {
             </motion.div>
           ))}
         </div>
-
-        {/* Credentials & Certifications */}
-        <motion.div
-          className="bg-gradient-to-r from-sage/5 via-cream/5 to-gold/5 rounded-2xl p-8 md:p-12 border border-sage/10"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.0 }}
-          viewport={{ once: true }}
-        >
-          <div className="text-center mb-8">
-            <h3 className="text-2xl md:text-3xl font-inter font-light text-amber-800 mb-4">
-              Trusted{' '}
-              <span className="italic text-terracotta-500 font-normal">Credentials</span>{' '}
-              & Certifications
-            </h3>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Victoria&apos;s extensive training and certifications ensure you receive the highest quality care.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              'Certified Holistic Practitioner',
-              'Tesla Wellness Technology Certified',
-              'RoXiva Light Therapy Specialist',
-              'Applied Kinesiology Expert'
-            ].map((credential, index) => (
-              <motion.div
-                key={index}
-                className="text-center bg-white/60 backdrop-blur-sm rounded-lg p-6 border border-sage/10"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-12 h-12 bg-gradient-to-r from-terracotta-500 to-sage rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-xl">✓</span>
-                </div>
-                <h4 className="font-medium text-amber-700 text-sm leading-tight">
-                  {credential}
-                </h4>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
 
         {/* Final CTA */}
         <motion.div
@@ -231,7 +186,7 @@ export function WhyChooseUs() {
             </div>
             <div className="flex items-center gap-2 text-slate-600">
               <div className="w-2 h-2 bg-gold rounded-full" />
-              <span className="text-sm">Nashville&apos;s Only Tesla Wellness Table</span>
+              <span className="text-sm">Nashville&apos;s First Tesla Quantum Table</span>
             </div>
           </motion.div>
         </motion.div>

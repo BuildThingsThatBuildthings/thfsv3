@@ -8,8 +8,8 @@ const featuredServices = [
   {
     id: 'tesla-wellness-table',
     name: 'Tesla Wellness Table',
-    tagline: "Nashville's Only Tesla Wellness Experience",
-    description: 'Experience the revolutionary Tesla Wellness Table - the only one in Nashville. This cutting-edge technology combines energy, frequency, and light to promote cellular regeneration and deep healing.',
+    tagline: "Nashville's First Tesla Quantum Table",
+    description: 'Experience the revolutionary Tesla Quantum Table - the first of its kind in Nashville. This cutting-edge technology combines energy, frequency, and light to promote cellular regeneration and deep healing.',
     benefits: [
       'Cellular regeneration and repair',
       'Enhanced energy and vitality',
@@ -19,7 +19,6 @@ const featuredServices = [
       'Accelerated recovery'
     ],
     duration: '60-90 minutes',
-    price: 'Starting at $150',
     image: '/images/placeholder.svg',
     color: 'terracotta'
   },
@@ -36,8 +35,7 @@ const featuredServices = [
       'Improved cognitive function',
       'Spiritual awakening'
     ],
-    duration: '45-60 minutes',
-    price: 'Starting at $125',
+    duration: 'Starting at 7 minutes',
     image: '/images/placeholder.svg',
     color: 'sage'
   }
@@ -82,7 +80,7 @@ export function FeaturedServices() {
             transition={{ duration: 1.0, delay: 0.6 }}
             viewport={{ once: true }}
           >
-            Discover Nashville&apos;s most advanced healing technologies, exclusively available at 
+            Discover advanced healing technologies available at 
             The Healing Frequency Space. Each session is carefully customized to your unique needs.
           </motion.p>
         </motion.div>
@@ -103,7 +101,9 @@ export function FeaturedServices() {
               {/* Content */}
               <div className={`space-y-8 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                 <div>
-                  <span className={`text-${service.color}-500 font-medium text-sm uppercase tracking-wider`}>
+                  <span className={`font-medium text-sm uppercase tracking-wider ${
+                    service.color === 'terracotta' ? 'text-terracotta-500' : 'text-sage-500'
+                  }`}>
                     {service.tagline}
                   </span>
                   <h3 className="text-3xl md:text-4xl font-inter font-light text-amber-800 mt-2 mb-4">
@@ -127,7 +127,9 @@ export function FeaturedServices() {
                         transition={{ duration: 0.8, delay: 0.8 + i * 0.1 }}
                         viewport={{ once: true }}
                       >
-                        <div className={`w-1.5 h-1.5 bg-${service.color}-500 rounded-full mt-2 flex-shrink-0`} />
+                        <div className={`w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 ${
+                          service.color === 'terracotta' ? 'bg-terracotta-500' : 'bg-sage-500'
+                        }`} />
                         <span className="text-slate-600">{benefit}</span>
                       </motion.div>
                     ))}
@@ -135,15 +137,15 @@ export function FeaturedServices() {
                 </div>
 
                 {/* Session Info */}
-                <div className={`bg-${service.color}-50 rounded-lg p-6 border border-${service.color}-100`}>
-                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                    <div>
+                <div className={`rounded-lg p-6 border ${
+                  service.color === 'terracotta' 
+                    ? 'bg-terracotta-50 border-terracotta-100' 
+                    : 'bg-sage-50 border-sage-100'
+                }`}>
+                  <div className="flex justify-center items-center">
+                    <div className="text-center">
                       <div className="text-sm text-slate-600 mb-1">Session Duration</div>
                       <div className="font-medium text-amber-800">{service.duration}</div>
-                    </div>
-                    <div>
-                      <div className="text-sm text-slate-600 mb-1">Investment</div>
-                      <div className={`font-medium text-${service.color}-600 text-lg`}>{service.price}</div>
                     </div>
                   </div>
                 </div>
@@ -151,12 +153,12 @@ export function FeaturedServices() {
                 {/* CTA */}
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button
-                    href={`/booking?service=${service.id}`}
+                    href={`/remote-healing`}
                     variant="primary"
                     size="lg"
                     className="hover:scale-105 transition-transform duration-300"
                   >
-                    Book {service.name} Session
+                    Discover Remote Healing
                   </Button>
                   <Button
                     href={`/services/${service.id}`}
@@ -185,18 +187,24 @@ export function FeaturedServices() {
                     className="object-cover"
                   />
                   {/* Elegant overlay */}
-                  <div className={`absolute inset-0 bg-gradient-to-t from-${service.color}-500/20 via-transparent to-transparent`} />
+                  <div className={`absolute inset-0 bg-gradient-to-t via-transparent to-transparent ${
+                    service.color === 'terracotta' 
+                      ? 'from-terracotta-500/20' 
+                      : 'from-sage-500/20'
+                  }`} />
                 </div>
 
                 {/* Floating badge */}
                 <motion.div
-                  className={`absolute -bottom-4 -right-4 bg-${service.color}-500 text-white px-6 py-3 rounded-full shadow-xl`}
+                  className={`absolute -bottom-4 -right-4 text-white px-6 py-3 rounded-full shadow-xl ${
+                    service.color === 'terracotta' ? 'bg-terracotta-500' : 'bg-sage-500'
+                  }`}
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 1.0, delay: 0.8 }}
                   viewport={{ once: true }}
                 >
-                  <span className="font-medium text-sm">Exclusive to Nashville</span>
+                  <span className="font-medium text-sm">First in Nashville</span>
                 </motion.div>
               </motion.div>
             </motion.div>
@@ -216,16 +224,16 @@ export function FeaturedServices() {
             <span className="italic text-terracotta-500 font-normal">Revolutionary Healing</span>?
           </h3>
           <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-            Book your personalized consultation to discover which healing technology 
-            is perfect for your unique journey to wellness.
+            Explore our remote healing options available worldwide, including 
+            specialized protocols for you and your pets with EMF protection benefits.
           </p>
           <Button
-            href="/booking"
+            href="/remote-healing"
             variant="primary"
             size="lg"
             className="hover:scale-105 transition-transform duration-300 shadow-xl"
           >
-            Schedule Your Consultation
+            Explore Healing Options
           </Button>
         </motion.div>
       </div>

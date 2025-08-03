@@ -30,7 +30,7 @@ export function About() {
               viewport={{ once: true }}
             >
               <span className="text-terracotta-500 font-medium uppercase tracking-wider text-sm">
-                Meet Victoria
+                Meet Victoria - Frequency Healing Practitioner
               </span>
               <h2 className="text-4xl md:text-5xl font-inter font-light text-amber-800 mt-4 mb-6 tracking-tight">
                 Founder of{" "}

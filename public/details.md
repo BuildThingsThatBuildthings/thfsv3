@@ -1,12 +1,12 @@
 Welcome to The Healing Frequency Space, a sanctuary for advanced wellness technologies designed to support your journey toward authentic healing and self-renewal.
-Tesla Wellness Table Sessions
-At The Healing Frequency Space, I am proud to offer sessions with the Tesla Wellness Table, invented by Paul Esch—a pioneer in the field of bioenergetic healing devices2. This unique table is inspired by the groundbreaking work of Nikola Tesla and integrates advanced technologies to create a deeply restorative environment for your body and mind.
-Each session is customized to your individual needs, using a blend of intuitive kinesiology and frequency selection guided by The Frequencies of Rifing guidebook. The Tesla Table features:
+Tesla Quantum Table Sessions
+At The Healing Frequency Space, I am proud to offer sessions with the Tesla Quantum Table. This unique table is inspired by the groundbreaking work of Nikola Tesla and integrates advanced technologies to create a deeply restorative environment for your body and mind.
+Each session is customized to your individual needs, using a blend of intuitive kinesiology and frequency selection . The Tesla Quantum Table features:
 A Tesla coil supported by a 12-pointed star for optimal energy flow and temperature regulation
 Six noble gas-filled lightbulbs emitting plasma energy
 A programmable frequency monitor for custom settings, including homeopathic remedy imprinting
 A vibrant LED array for chromotherapy (color therapy) treatments79
-During your time on the Tesla Wellness Table, multiple energy vectors—including pulsed electromagnetic frequencies, plasma, sound, and light—work synergistically to create a toroidal energy field around your body. This environment is designed to help restore your body’s natural electromagnetic balance, encouraging a shift into a parasympathetic (rest and digest) state, which is essential for deep healing and regeneration79.
+During your time on the Tesla Quantum Table, multiple energy vectors—including pulsed electromagnetic frequencies, plasma, sound, and light—work synergistically to create a healing energy field around your body. This environment is designed to help restore your body’s natural electromagnetic balance, encouraging a shift into a parasympathetic (rest and digest) state, which is essential for deep healing and regeneration79.
 Reported Benefits from Tesla Table Users:
 Enhanced relaxation and stress reduction
 Relief from pain and inflammation
@@ -17,7 +17,7 @@ Increased metabolism and improved digestion
 Heightened sense of wellbeing and life force
 Support for recovery and rejuvenation, including accelerated wound healing and enhanced cancer recovery
 Anti-aging effects and improved focus179
-Many users describe feeling more balanced, energized, and calm after sessions, with some reporting remarkable improvements in their health over time. Please note: these are personal experiences and not medical claims. The Tesla Wellness Table is not a treatment or cure, but a supportive modality to facilitate your body’s inherent healing abilities.
+Many users describe feeling more balanced, energized, and calm after sessions, with some reporting remarkable improvements in their health over time. Please note: these are personal experiences and not medical claims. The Tesla Quantum Table is not a treatment or cure, but a supportive modality to facilitate your body’s inherent healing abilities.
 
 Mission:To guide you toward authentic healing, empowering you to become your best future self. Every session is tailored to your unique needs, supporting your body’s intuitive capacity for self-healing.
 
@@ -33,9 +33,9 @@ Support for those managing depression, anxiety, or in recovery programs
 A safe, controlled way to experience altered states of consciousness—whether for five minutes or a full session468
 RoXiva is ideal for anyone seeking a mood boost, a creative escape, or a safe, non-pharmaceutical approach to exploring the mind. Each session is tailored to your comfort and goals, offering a unique and uplifting experience every time.
 
-Disclaimer:Neither the Tesla Wellness Table nor RoXiva sessions are intended to diagnose, treat, or cure any medical condition. Experiences and benefits are based on user reports and individual results may vary. Sessions are designed to complement your wellness journey and support your body’s natural healing processes.
-Combining Tesla Wellness Table sessions with RoXiva stroboscopic light therapy has the potential to significantly enhance your overall sense of well-being by addressing both physical and mental dimensions of health in a synergistic way.
-Tesla Wellness Table sessions focus on restoring the body’s energetic balance, supporting cellular communication, reducing inflammation, boosting the immune system, and promoting deep relaxation. Users often report feeling more balanced, energized, and calm, with improvements in pain relief, emotional clarity, and overall vitality.
+Disclaimer:Neither the Tesla Quantum Table nor RoXiva sessions are intended to diagnose, treat, or cure any medical condition. Experiences and benefits are based on user reports and individual results may vary. Sessions are designed to complement your wellness journey and support your body’s natural healing processes.
+Combining Tesla Quantum Table sessions with RoXiva stroboscopic light therapy has the potential to significantly enhance your overall sense of well-being by addressing both physical and mental dimensions of health in a synergistic way.
+Tesla Quantum Table sessions focus on restoring the body’s energetic balance, supporting cellular communication, reducing inflammation, boosting the immune system, and promoting deep relaxation. Users often report feeling more balanced, energized, and calm, with improvements in pain relief, emotional clarity, and overall vitality.
 RoXiva Light Therapy works through brainwave and audio-visual entrainment, using stroboscopic light and sound patterns to guide the brain into desired states—ranging from deep relaxation to heightened focus or even psychedelic-like experiences. Reported benefits include stress reduction, improved sleep, elevated mood, enhanced creativity, and greater mental clarity124. RoXiva also helps release old thought patterns, reset the nervous system, and foster emotional balance34.
 Synergistic Benefits of Combining Both Modalities
 Deeper Relaxation and Stress Relief: Tesla sessions bring the body into a parasympathetic state, while RoXiva’s brainwave entrainment deepens mental relaxation and helps release stress at the neurological level14.
@@ -46,10 +46,10 @@ Holistic Mind-Body Integration: The combination engages multiple senses and sys
 
 Ryan, we can incorporate something like this, somewhere on the website
 Many wellness centers recommend pairing light therapy with other bioenergetic modalities for a more profound experience, as the multisensory stimulation can amplify relaxation, clarity, and healing outcomes.
- By integrating Tesla Wellness Table sessions with RoXiva, you are likely to experience a more comprehensive sense of balance, rejuvenation, and inner harmony—supporting both your physical and mental wellness goals.
+ By integrating Tesla Quantum Table sessions with RoXiva, you are likely to experience a more comprehensive sense of balance, rejuvenation, and inner harmony—supporting both your physical and mental wellness goals.
 
 Under the Tab: SESSIONS
-Tesla Wellness Table Sessions
+Tesla Quantum Table Sessions
 Single Session Pricing
 20-minute session: $55
 30-minute session: $80
@@ -61,7 +61,7 @@ Complete Sessions Menu
 Initial Consultation
 2 hours: $150Comprehensive first session to assess your needs and goals.
 
-Tesla Wellness Table Sessions
+Tesla Quantum Table Sessions
 Single Sessions:
 20 min: $55
 30 min: $80

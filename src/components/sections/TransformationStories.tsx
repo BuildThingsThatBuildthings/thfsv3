@@ -188,47 +188,6 @@ export function TransformationStories() {
           </div>
         </motion.div>
 
-        {/* Stats Section */}
-        <motion.div
-          className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.0 }}
-          viewport={{ once: true }}
-        >
-          <motion.div
-            className="text-center bg-white/60 backdrop-blur-sm rounded-xl p-8 border border-sage/10"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.0, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <div className="text-4xl font-inter font-light text-terracotta-500 mb-2">1000+</div>
-            <div className="text-slate-600 font-medium">Lives Transformed</div>
-          </motion.div>
-          
-          <motion.div
-            className="text-center bg-white/60 backdrop-blur-sm rounded-xl p-8 border border-sage/10"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.0, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            <div className="text-4xl font-inter font-light text-sage mb-2">95%</div>
-            <div className="text-slate-600 font-medium">Success Rate</div>
-          </motion.div>
-          
-          <motion.div
-            className="text-center bg-white/60 backdrop-blur-sm rounded-xl p-8 border border-sage/10"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.0, delay: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <div className="text-4xl font-inter font-light text-gold mb-2">30+</div>
-            <div className="text-slate-600 font-medium">Years Experience</div>
-          </motion.div>
-        </motion.div>
 
         {/* CTA */}
         <motion.div
@@ -248,7 +207,7 @@ export function TransformationStories() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Schedule Your Consultation
+              Explore Remote Healing Options
             </motion.button>
             <motion.button
               className="border-2 border-sage text-sage px-8 py-4 rounded-lg font-medium hover:bg-sage hover:text-white transition-colors duration-300"

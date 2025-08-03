@@ -11,11 +11,11 @@ export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
-  // Handle scroll effect - Hide header initially, show after scroll
+  // Handle scroll effect - Always show header with background
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      setIsScrolled(scrollY > 100); // Show header after scrolling 100px
+      setIsScrolled(scrollY > 50); // Show background after minimal scroll
     };
     
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -34,17 +34,17 @@ export function Navigation() {
   
   return (
     <motion.nav 
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-xl border-b border-terracotta-500/10' : ''
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-xl border-b border-terracotta-500/10' : 'bg-white/90 backdrop-blur-sm'
       }`}
-      initial={{ y: -100, opacity: 0 }}
+      initial={{ y: 0, opacity: 1 }}
       animate={{ 
-        y: isScrolled ? 0 : -100, 
-        opacity: isScrolled ? 1 : 0 
+        y: 0, 
+        opacity: 1 
       }}
       transition={{ 
-        duration: 0.6, 
-        ease: [0.25, 0.46, 0.45, 0.94] // Custom easing for elegant motion
+        duration: 0.3, 
+        ease: "easeOut"
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

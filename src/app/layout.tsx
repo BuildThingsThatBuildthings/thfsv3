@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     siteName: 'The Healing Frequency Space',
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: '/images/og-image.svg',
         width: 1200,
         height: 630,
         alt: 'The Healing Frequency Space - Nashville Frequency Healing Sanctuary',
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'The Healing Frequency Space | Nashville Frequency Healing',
     description: 'Transform your well-being with Tesla Wellness Table and RoXiva light therapy.',
-    images: ['/images/og-image.jpg'],
+    images: ['/images/og-image.svg'],
   },
   robots: {
     index: true,

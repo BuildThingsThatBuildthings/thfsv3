@@ -226,17 +226,17 @@ export function LocationContact() {
             <span className="italic text-gold font-normal">Healing Journey</span>?
           </h3>
           <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-            Schedule your consultation today and take the first step toward transformational healing.
+            Discover remote healing options available worldwide, including pet healing and EMF protection.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
-              href="/booking"
+              href="/remote-healing"
               variant="primary"
               size="lg"
               className="bg-terracotta-500 hover:bg-terracotta-600 hover:scale-105 transition-all duration-300 shadow-2xl"
             >
-              Schedule Consultation
+              Explore Remote Healing
             </Button>
             <Button
               href="/contact"

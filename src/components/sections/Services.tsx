@@ -126,11 +126,11 @@ function ServiceCard({ service, index }: ServiceCardProps) {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-3">
             <Button
-              href={`/booking?service=${service.name}`}
+              href="/remote-healing"
               variant="primary"
               className="flex-1"
             >
-              Book Session
+              Discover Remote Healing
             </Button>
             <Button
               href={`/services/${service.name}`}
@@ -215,8 +215,8 @@ export function Services() {
             transition={{ duration: 1.0, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            Start with a comprehensive consultation where Victoria will assess your unique needs 
-            and create a personalized healing plan using kinesiology and 30+ years of expertise.
+            Explore our remote healing options available worldwide, including Tesla Quantum protocols, 
+            pet healing, and EMF protection - all delivered from the comfort of your home.
           </motion.p>
           <motion.div 
             className="flex flex-col sm:flex-row gap-6 justify-center"
@@ -226,12 +226,12 @@ export function Services() {
             viewport={{ once: true }}
           >
             <Button
-              href="/booking?service=consultation"
+              href="/remote-healing"
               variant="primary"
               size="lg"
               className="px-10 py-4 text-lg hover:scale-105 transition-transform duration-300"
             >
-              Book Initial Consultation
+              Explore Remote Options
             </Button>
             <Button
               href="/about"
