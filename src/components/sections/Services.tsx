@@ -8,6 +8,32 @@ import { FramedLayout } from '@/components/layout';
 import { Service } from '@/types';
 import servicesData from '@/content/services.json';
 
+// Map service IDs to available images
+function getServiceImage(serviceId: string): string {
+  const imageMap: Record<string, string> = {
+    'tesla-table': '/images/tesla_table.PNG',
+    'roxiva': '/images/roxiva.jpg',
+    'consultation': '/images/victoria-healing-expert.jpeg',
+    'remote': '/images/roxiva.jpg',
+    'herbalism': '/images/victoria-healing-expert.jpeg'
+  };
+  
+  return imageMap[serviceId] || '/images/tesla_table.PNG';
+}
+
+// Generate descriptive alt text for service images
+function getServiceImageAlt(serviceId: string, serviceName: string): string {
+  const altTextMap: Record<string, string> = {
+    'tesla-table': 'Tesla Wellness Table - biofield frequency technology device at The Healing Frequency Space',
+    'roxiva': 'RoXiva light therapy device - advanced brainwave entrainment technology at The Healing Frequency Space',
+    'consultation': 'Victoria - healing frequency practitioner and founder of The Healing Frequency Space',
+    'remote': 'Victoria in vibrant chair - remote frequency healing sessions available worldwide',
+    'herbalism': 'Victoria - certified herbalism practitioner providing natural wellness consultation'
+  };
+  
+  return altTextMap[serviceId] || `${serviceName} - healing service at The Healing Frequency Space`;
+}
+
 interface ServiceCardProps {
   service: Service;
   index: number;
@@ -16,7 +42,6 @@ interface ServiceCardProps {
 function ServiceCard({ service, index }: ServiceCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   
-  const popularDuration = service.durations.find(d => d.isPopular) || service.durations[0];
   const bestPackage = service.packages.length > 0 ? service.packages[service.packages.length - 1] : null;
   
   return (
@@ -30,10 +55,10 @@ function ServiceCard({ service, index }: ServiceCardProps) {
         {/* Service Image */}
         <div className="relative h-64 overflow-hidden">
           <Image
-            src="/images/placeholder.svg"
-            alt={service.displayName}
+            src={getServiceImage(service.id)}
+            alt={getServiceImageAlt(service.id, service.displayName)}
             fill
-            className="object-cover transition-transform duration-500 hover:scale-105"
+            className="object-cover object-center transition-transform duration-500 hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
           
@@ -48,15 +73,6 @@ function ServiceCard({ service, index }: ServiceCardProps) {
             </span>
           </div>
           
-          {/* Price Display */}
-          <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm rounded-sm px-3 py-2">
-            <div className="text-right">
-              <div className="text-sm text-slate-600">Starting at</div>
-              <div className="text-lg font-semibold text-terracotta-500">
-                ${popularDuration.price}
-              </div>
-            </div>
-          </div>
         </div>
         
         {/* Service Content */}
@@ -96,29 +112,28 @@ function ServiceCard({ service, index }: ServiceCardProps) {
             <h4 className="text-sm font-medium text-amber-700 mb-2">Session Options:</h4>
             <div className="space-y-2">
               {service.durations.map((duration, i) => (
-                <div key={i} className="flex justify-between items-center text-sm">
+                <div key={i} className="text-sm">
                   <span className="text-slate-600">
                     {duration.minutes} min {duration.description && `(${duration.description})`}
                     {duration.isPopular && (
                       <span className="ml-2 bg-terracotta-100 text-terracotta-600 px-2 py-0.5 rounded-sm text-xs">
-                        Popular
+                        Most Popular
                       </span>
                     )}
                   </span>
-                  <span className="font-medium text-amber-800">${duration.price}</span>
                 </div>
               ))}
             </div>
           </div>
           
-          {/* Package Savings */}
+          {/* Package Information */}
           {bestPackage && (
             <div className="bg-sage/10 rounded-sm p-3 mb-4">
               <div className="text-sm text-sage font-medium">
-                💰 Save ${bestPackage.savings} with {bestPackage.sessionCount}-session package
+                • Multiple session packages available
               </div>
               <div className="text-xs text-slate-600 mt-1">
-                {bestPackage.discountPercent}% discount • Valid {bestPackage.expirationDays} days
+                Learn about session options and wellness packages
               </div>
             </div>
           )}
@@ -126,15 +141,15 @@ function ServiceCard({ service, index }: ServiceCardProps) {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-3">
             <Button
-              href="/remote-healing"
+              href="/booking"
               variant="primary"
               className="flex-1"
             >
-              Discover Remote Healing
+              Book a Session
             </Button>
             <Button
               href={`/services/${service.name}`}
-              variant="outline"
+              variant="soft"
               className="flex-1"
             >
               Learn More
@@ -150,41 +165,27 @@ export function Services() {
   const services = servicesData.services as Service[];
   
   return (
-    <div className="bg-gradient-to-b from-white via-cream/10 to-white py-32">
+    <div className="bg-gradient-to-b from-white via-cream/10 to-white py-20">
       <FramedLayout padding="xl" className="bg-white/80 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-8">
-          {/* Section Header with enhanced spacing */}
+          {/* Section Header */}
           <motion.div
-            className="text-center mb-24"
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <motion.h2 
-              className="text-5xl md:text-6xl font-inter font-light text-amber-800 mb-8 tracking-tight"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              Transform Your{' '}
-              <span className="italic text-sage font-normal">Well-Being</span>
-            </motion.h2>
-            <motion.p 
-              className="text-xl md:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed font-light"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              Experience the transformative power of frequency healing through our carefully curated 
-              selection of cutting-edge technologies and personalized therapeutic approaches.
-            </motion.p>
+            <h2 className="text-4xl md:text-5xl font-inter font-light text-amber-800 mb-6 tracking-tight">
+              Our <span className="italic text-sage font-normal">Services</span>
+            </h2>
+            <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              Experience Tesla frequency technologies and RoXiva light therapy designed for optimal wellness and transformation.
+            </p>
           </motion.div>
         
         {/* Services Grid with enhanced spacing */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 md:gap-12 mb-20">
           {services.map((service, index) => (
             <ServiceCard key={service.id} service={service} index={index} />
           ))}
@@ -205,8 +206,8 @@ export function Services() {
             transition={{ duration: 1.0, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Ready to Begin Your{' '}
-            <span className="italic text-sage font-normal">Healing Journey</span>?
+            Learn More About{' '}
+            <span className="italic text-sage font-normal">Our Services</span>
           </motion.h3>
           <motion.p 
             className="text-xl text-slate-600 mb-12 max-w-3xl mx-auto leading-relaxed font-light"
@@ -215,8 +216,8 @@ export function Services() {
             transition={{ duration: 1.0, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            Explore our remote healing options available worldwide, including Tesla Quantum protocols, 
-            pet healing, and EMF protection - all delivered from the comfort of your home.
+            Discover the healing power of Tesla frequency technologies and RoXiva light therapy 
+            at our wellness center designed for optimal healing and transformation.
           </motion.p>
           <motion.div 
             className="flex flex-col sm:flex-row gap-6 justify-center"
@@ -226,18 +227,16 @@ export function Services() {
             viewport={{ once: true }}
           >
             <Button
-              href="/remote-healing"
+              href="/booking"
               variant="primary"
               size="lg"
-              className="px-10 py-4 text-lg hover:scale-105 transition-transform duration-300"
             >
-              Explore Remote Options
+              Schedule Your Visit
             </Button>
             <Button
               href="/about"
               variant="secondary"
               size="lg"
-              className="px-10 py-4 text-lg hover:scale-105 transition-transform duration-300"
             >
               Meet Victoria
             </Button>

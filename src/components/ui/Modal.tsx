@@ -1,6 +1,13 @@
 'use client';
 
-import { ModalProps } from '@/types';
+// Local interface since it's not exported from main types
+interface ModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  title?: string;
+  children: React.ReactNode;
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+}
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect } from 'react';
 

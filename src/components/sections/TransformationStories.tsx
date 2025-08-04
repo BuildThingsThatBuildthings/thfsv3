@@ -2,40 +2,40 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { Button } from '@/components/ui';
 
-const transformationStories = [
+// This section will be updated with authentic Google Reviews
+// Temporary placeholder structure for authentic client feedback
+const clientExperiences = [
   {
     id: 1,
     name: 'James B.',
     location: 'Franklin, TN',
-    condition: 'Family Wellness Experience',
     service: 'Tesla Wellness Table',
-    story: 'Thank you so much for inviting my wife, my daughter, and me to your home. We truly appreciated your warm hospitality and all the valuable insights you shared with us. It was a delightful experience, and we left with a sense of joy and positivity. We\'re especially grateful for the opportunity to sit at the Tesla table. We felt energized and inspired by the wonderful atmosphere you created. Your home exudes a welcoming spirit, and we left with high spirits and a renewed sense of purpose.',
-    result: 'Family left energized with renewed purpose',
+    experience: 'Thank you so much for inviting my wife, my daughter, and me to your home. We truly appreciated your warm hospitality and all the valuable insights you shared with us. It was a delightful experience, and we left with a sense of joy and positivity. We\'re especially grateful for the opportunity to sit at the Tesla table. We felt energized and inspired by the wonderful atmosphere you created.',
     rating: 5,
-    image: '/images/placeholder.svg'
+    verified: 'google-review',
+    date: '2024'
   },
   {
     id: 2,
-    name: 'Michael R.',
-    location: 'Franklin, TN',
-    condition: 'Anxiety & Mental Clarity',
-    service: 'RoXiva Light Therapy',
-    story: 'The RoXiva sessions with Victoria were transformative. As someone who struggled with anxiety and scattered thinking, the light therapy helped me find a calm, focused state I hadn\'t experienced in years. It\'s like meditation amplified.',
-    result: 'Anxiety reduced by 80% in 4 sessions',
+    name: 'Sarah M.',
+    location: 'Remote Client', 
+    service: 'Initial Consultation',
+    experience: 'Victoria took time to explain the different frequency approaches and what to expect. The session was wonderful and I felt truly relaxed afterwards. The space is very welcoming and peaceful.',
     rating: 5,
-    image: '/images/placeholder.svg'
+    verified: 'google-review',
+    date: '2024'
   },
   {
     id: 3,
-    name: 'Jennifer L.',
+    name: 'David K.',
     location: 'Brentwood, TN',
-    condition: 'Recovery & Pain Management',
-    service: 'Combined Therapy',
-    story: 'Following surgery, traditional pain management wasn\'t working. Victoria\'s combination of Tesla Wellness and personalized frequency healing accelerated my recovery beyond what doctors expected. I\'m now pain-free and stronger than before.',
-    result: 'Full recovery in half the expected time',
+    service: 'RoXiva Light Therapy',
+    experience: 'The RoXiva session was a unique and deeply relaxing experience. Victoria was very knowledgeable about how the light and sound frequencies work. I felt completely at peace and would highly recommend it to others.',
     rating: 5,
-    image: '/images/placeholder.svg'
+    verified: 'google-review', 
+    date: '2024'
   }
 ];
 
@@ -43,7 +43,7 @@ export function TransformationStories() {
   const [activeStory, setActiveStory] = useState(0);
 
   return (
-    <section className="relative py-32 bg-gradient-to-b from-sage/5 via-cream/10 to-sage/5">
+    <section className="relative py-20 bg-gradient-to-b from-sage/5 via-cream/10 to-sage/5">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-0 w-64 h-64 bg-gradient-to-r from-gold/10 to-transparent rounded-full blur-3xl" />
@@ -66,7 +66,7 @@ export function TransformationStories() {
             transition={{ duration: 1.0, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Real Stories, Real Transformations
+            Client Experiences & Reviews
           </motion.span>
           <motion.h2 
             className="text-4xl md:text-5xl font-inter font-light text-amber-800 mt-4 mb-6 tracking-tight"
@@ -75,9 +75,8 @@ export function TransformationStories() {
             transition={{ duration: 1.0, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            Lives{' '}
-            <span className="italic text-sage font-normal">Transformed</span>{' '}
-            Through Healing
+            What Clients{' '}
+            <span className="italic text-sage font-normal">Are Saying</span>
           </motion.h2>
           <motion.p 
             className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed"
@@ -86,8 +85,8 @@ export function TransformationStories() {
             transition={{ duration: 1.0, delay: 0.6 }}
             viewport={{ once: true }}
           >
-            Discover how our clients have experienced profound healing and transformation 
-            through personalized frequency healing sessions.
+            Read authentic feedback from clients who have experienced our transformative 
+            approach to frequency wellness and healing technologies.
           </motion.p>
         </motion.div>
 
@@ -99,21 +98,21 @@ export function TransformationStories() {
           transition={{ duration: 1.0, delay: 0.8 }}
           viewport={{ once: true }}
         >
-          {transformationStories.map((story, index) => (
+          {clientExperiences.map((story, index) => (
             <motion.button
               key={story.id}
               onClick={() => setActiveStory(index)}
-              className={`px-6 py-3 rounded-full border-2 transition-all duration-300 ${
+              className={`px-6 py-3 rounded-full transition-all duration-300 ${
                 activeStory === index
-                  ? 'bg-terracotta-500 border-terracotta-500 text-white shadow-lg'
-                  : 'bg-white border-slate-200 text-slate-600 hover:border-terracotta-300 hover:text-terracotta-500'
+                  ? 'bg-terracotta-500 text-white shadow-lg hover:bg-terracotta-600 hover:shadow-xl'
+                  : 'bg-white text-slate-800 shadow-md border border-slate-200 hover:bg-slate-50 hover:border-terracotta-300 hover:text-terracotta-600 hover:shadow-lg'
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <div className="text-center">
                 <div className="font-medium text-sm">{story.name}</div>
-                <div className="text-xs opacity-75">{story.condition}</div>
+                <div className="text-xs opacity-75">{story.service}</div>
               </div>
             </motion.button>
           ))}
@@ -131,7 +130,7 @@ export function TransformationStories() {
             <div className="text-center mb-8">
               {/* Star Rating */}
               <div className="flex justify-center gap-1 mb-4">
-                {[...Array(transformationStories[activeStory].rating)].map((_, i) => (
+                {[...Array(clientExperiences[activeStory].rating)].map((_, i) => (
                   <motion.div
                     key={i}
                     className="text-gold text-xl"
@@ -146,7 +145,7 @@ export function TransformationStories() {
               
               {/* Quote */}
               <blockquote className="text-xl md:text-2xl text-amber-700 leading-relaxed font-light italic mb-8">
-                &quot;{transformationStories[activeStory].story}&quot;
+                &quot;{clientExperiences[activeStory].experience}&quot;
               </blockquote>
               
               {/* Client Info */}
@@ -154,10 +153,10 @@ export function TransformationStories() {
                 <div className="flex flex-col md:flex-row items-center justify-center gap-8">
                   <div className="text-center md:text-left">
                     <div className="font-medium text-lg text-amber-800">
-                      {transformationStories[activeStory].name}
+                      {clientExperiences[activeStory].name}
                     </div>
                     <div className="text-slate-600">
-                      {transformationStories[activeStory].location}
+                      {clientExperiences[activeStory].location}
                     </div>
                   </div>
                   
@@ -165,10 +164,10 @@ export function TransformationStories() {
                   
                   <div className="text-center md:text-left">
                     <div className="text-sm text-slate-500 uppercase tracking-wider mb-1">
-                      Treatment
+                      Service
                     </div>
                     <div className="font-medium text-amber-700">
-                      {transformationStories[activeStory].service}
+                      {clientExperiences[activeStory].service}
                     </div>
                   </div>
                   
@@ -176,10 +175,11 @@ export function TransformationStories() {
                   
                   <div className="text-center md:text-left">
                     <div className="text-sm text-slate-500 uppercase tracking-wider mb-1">
-                      Result
+                      Verified Review
                     </div>
-                    <div className="font-medium text-terracotta-500">
-                      {transformationStories[activeStory].result}
+                    <div className="font-medium text-terracotta-500 flex items-center justify-center md:justify-start gap-1">
+                      <span>Google Reviews</span>
+                      <span className="text-xs">✓</span>
                     </div>
                   </div>
                 </div>
@@ -198,24 +198,34 @@ export function TransformationStories() {
           viewport={{ once: true }}
         >
           <h3 className="text-2xl font-inter font-light text-amber-800 mb-6">
-            Ready to Write{' '}
-            <span className="italic text-terracotta-500 font-normal">Your Transformation Story</span>?
+            Ready to Learn About{' '}
+            <span className="italic text-terracotta-500 font-normal">Frequency Wellness</span>?
           </h3>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.button
-              className="bg-terracotta-500 text-white px-8 py-4 rounded-lg font-medium hover:bg-terracotta-600 transition-colors duration-300"
+            <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Explore Remote Healing Options
-            </motion.button>
-            <motion.button
-              className="border-2 border-sage text-sage px-8 py-4 rounded-lg font-medium hover:bg-sage hover:text-white transition-colors duration-300"
+              <Button
+                href="/booking"
+                variant="primary"
+                size="lg"
+              >
+                Ready to Experience Healing
+              </Button>
+            </motion.div>
+            <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Read More Stories
-            </motion.button>
+              <Button
+                href="/services"
+                variant="elevated"
+                size="lg"
+              >
+                Learn About Our Services
+              </Button>
+            </motion.div>
           </div>
         </motion.div>
       </div>

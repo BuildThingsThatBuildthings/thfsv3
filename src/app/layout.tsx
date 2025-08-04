@@ -17,23 +17,23 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: 'The Healing Frequency Space | Nashville Frequency Healing',
+    default: 'The Healing Frequency Space | Frequency Healing & Wellness',
     template: '%s | The Healing Frequency Space'
   },
   description: 'Founded by Reiki Master and herbalist Victoria, The Healing Frequency Space offers transformative wellness experiences combining Tesla Wellness Table, RoXiva light therapy, and holistic herbal consultations. Change Your Frequency, Change Everything.',
   keywords: [
-    'frequency healing Nashville',
-    'Tesla wellness table Tennessee',
-    'RoXiva light therapy Nashville',
-    'holistic healing Nashville',
-    'energy healing Nashville',
-    'wellness center Nashville',
+    'frequency healing',
+    'Tesla wellness table',
+    'RoXiva light therapy',
+    'holistic healing',
+    'energy healing',
+    'wellness center',
     'Victoria frequency healing',
-    'bioenergetic healing Tennessee',
-    'Reiki Master Nashville',
-    'herbalism consultation Nashville',
+    'bioenergetic healing',
+    'Reiki Master',
+    'herbalism consultation',
     'energy medicine specialist',
-    'holistic herbalist Tennessee'
+    'holistic herbalist'
   ],
   authors: [{ name: 'Victoria, The Healing Frequency Space' }],
   creator: 'The Healing Frequency Space',
@@ -51,21 +51,21 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://healingfrequencyspace.com',
-    title: 'The Healing Frequency Space | Nashville Frequency Healing',
-    description: 'Transform your well-being with Tesla Wellness Table and RoXiva light therapy. Nashville\'s premier frequency healing sanctuary.',
+    title: 'The Healing Frequency Space | Frequency Healing & Wellness',
+    description: 'Transform your well-being with Tesla Wellness Table and RoXiva light therapy. Premier frequency healing services for in-person and remote sessions.',
     siteName: 'The Healing Frequency Space',
     images: [
       {
         url: '/images/og-image.svg',
         width: 1200,
         height: 630,
-        alt: 'The Healing Frequency Space - Nashville Frequency Healing Sanctuary',
+        alt: 'The Healing Frequency Space - Frequency Healing & Wellness Center',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'The Healing Frequency Space | Nashville Frequency Healing',
+    title: 'The Healing Frequency Space | Frequency Healing & Wellness',
     description: 'Transform your well-being with Tesla Wellness Table and RoXiva light therapy.',
     images: ['/images/og-image.svg'],
   },

@@ -1,10 +1,5 @@
-export { Hero } from './Hero';
-export { HeroB } from './HeroB';
-export { HeroC } from './HeroC';
-export { HeroD } from './HeroD';
-export { About } from './About';
-export { FeaturedServices } from './FeaturedServices';
-export { Services } from './Services';
-export { TransformationStories } from './TransformationStories';
-export { WhyChooseUs } from './WhyChooseUs';
-export { LocationContact } from './LocationContact';
+export { Hero } from "./Hero";
+export { About } from "./About";
+export { FeaturedServices } from "./FeaturedServices";
+export { TransformationStories } from "./TransformationStories";
+export { LocationContact } from "./LocationContact";

@@ -1,6 +1,16 @@
 'use client';
 
-import { InputProps } from '@/types';
+// Local interface since it's not exported from main types
+interface InputProps {
+  label?: string;
+  error?: string;
+  required?: boolean;
+  type?: 'text' | 'email' | 'tel' | 'password' | 'number';
+  placeholder?: string;
+  value?: string;
+  onChange?: (value: string) => void;
+  className?: string;
+}
 import { useState } from 'react';
 
 export function Input({
@@ -17,7 +27,7 @@ export function Input({
   
   const inputClasses = `
     w-full px-4 py-3 border rounded-sm transition-all duration-200
-    focus:outline-none focus:ring-2 focus:ring-terracotta-500 focus:border-terracotta-500
+    focus:outline-none focus:border-flow-600
     ${error ? 'border-red-500' : 'border-slate-300'}
     ${focused ? 'border-terracotta-500' : ''}
     disabled:bg-slate-100 disabled:cursor-not-allowed

@@ -5,7 +5,7 @@ import { Button } from '@/components/ui';
 
 export default function BookingPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-cream/10 to-white py-32">
+    <div className="min-h-screen bg-gradient-to-b from-white via-cream/10 to-white py-16">
       <div className="max-w-4xl mx-auto px-8">
         {/* Header */}
         <motion.div
@@ -20,7 +20,7 @@ export default function BookingPage() {
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Begin your transformation journey with a personalized consultation and healing session 
-            at Nashville&apos;s premier frequency healing sanctuary.
+            through our frequency healing services.
           </p>
         </motion.div>
 
@@ -36,14 +36,14 @@ export default function BookingPage() {
           >
             <div className="text-center mb-6">
               <div className="w-16 h-16 bg-terracotta-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-2xl">🏢</span>
+                <div className="w-8 h-8 bg-white rounded-sm opacity-80" />
               </div>
               <h3 className="text-2xl font-inter font-medium text-amber-800 mb-3">
                 In-Person Sessions
               </h3>
               <p className="text-slate-600">
                 Experience the full power of our Tesla Wellness Table and RoXiva light therapy 
-                in our Nashville healing sanctuary.
+                through our in-person healing sessions.
               </p>
             </div>
             
@@ -85,7 +85,9 @@ export default function BookingPage() {
           >
             <div className="text-center mb-6">
               <div className="w-16 h-16 bg-sage-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-2xl">🌐</span>
+                <div className="w-8 h-8 border-2 border-white rounded-full border-opacity-80 relative">
+                  <div className="absolute inset-2 bg-white rounded-full opacity-60" />
+                </div>
               </div>
               <h3 className="text-2xl font-inter font-medium text-amber-800 mb-3">
                 Remote Sessions
@@ -157,8 +159,7 @@ export default function BookingPage() {
           </div>
 
           <div className="text-sm text-slate-500">
-            <p>Location: 123 Healing Way, Nashville, TN 37203</p>
-            <p>Hours: Monday-Friday 9AM-7PM, Saturday 10AM-5PM, Sunday by appointment</p>
+            <p>Contact us to discuss session availability and scheduling.</p>
           </div>
         </motion.div>
       </div>

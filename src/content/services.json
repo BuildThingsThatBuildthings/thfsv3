@@ -4,14 +4,17 @@
       "id": "tesla-table",
       "name": "tesla-table",
       "displayName": "Tesla Wellness Table",
-      "description": "Experience the transformative power of scalar wave technology with Nashville's only Tesla Wellness Table. This cutting-edge bioenergetic device helps restore your body's natural electromagnetic field, promoting deep healing and cellular regeneration.",
+      "description": "Nashville's First Tesla Quantum Table represents a wellness approach to biofield frequency technology based on Nikola Tesla's research into electromagnetic fields and their potential interactions with biological systems. This device generates specific frequency patterns that research suggests may influence cellular communication processes. Each session is wellness-focused, helping clients understand how different frequencies might interact with the body's natural bioelectric systems, with protocols referenced from established frequency research guides.",
       "benefits": [
-        "Reduces stress and promotes deep relaxation",
-        "Enhances cellular energy and vitality",
-        "Supports natural healing processes",
-        "Balances electromagnetic field",
-        "Improves sleep quality and mental clarity",
-        "Boosts immune system function"
+        "May support relaxation and stress reduction",
+        "Designed to support comfort and inflammatory response",
+        "Intended to support cellular communication and energy",
+        "May complement immune system function",
+        "Aims to support energy center balance",
+        "May support metabolic function and digestion",
+        "Designed to support sense of wellbeing",
+        "Intended to support recovery and rejuvenation processes",
+        "May support cellular renewal and mental clarity"
       ],
       "durations": [
         {
@@ -70,14 +73,14 @@
       "id": "roxiva",
       "name": "roxiva",
       "displayName": "RoXiva Light Therapy",
-      "description": "Journey into transformative states of consciousness with RoXiva's advanced light and sound technology. This immersive experience uses precisely calibrated frequencies to guide your brain into therapeutic states for deep healing and personal insight. Sessions starting at just 7 minutes make this accessible for any schedule.",
+      "description": "RoXiva utilizes light and sound frequency technology to support relaxation and meditative states. This system employs calibrated frequencies designed to encourage brainwave entrainment toward therapeutic patterns associated with stress reduction and mental clarity. Sessions are available from 7 minutes for scheduling flexibility.",
       "benefits": [
-        "Reduces anxiety and depression",
-        "Enhances meditation and mindfulness",
-        "Improves focus and mental clarity",
-        "Balances brainwave patterns",
-        "Facilitates emotional release",
-        "Promotes spiritual insight and growth"
+        "May support relaxation and stress management",
+        "Designed to encourage meditative states",
+        "May support focus and mental clarity",
+        "Utilizes brainwave entrainment technology",
+        "May support emotional well-being",
+        "Provides wellness insight into light-sound therapy"
       ],
       "durations": [
         {
@@ -115,12 +118,12 @@
       "id": "consultation",
       "name": "consultation",
       "displayName": "Initial Consultation",
-      "description": "Begin your healing journey with a comprehensive 2-hour session including health assessment, personalized frequency selection via kinesiology, and your first treatment. Victoria will create a customized wellness plan tailored to your unique needs.",
+      "description": "Initial consultation provides a comprehensive 2-hour informational session including wellness assessment, personalized frequency selection via kinesiology methods, and an introductory session. Victoria will develop a personalized wellness plan based on your individual needs and interests.",
       "benefits": [
         "Complete health and wellness assessment",
         "Personalized frequency selection via kinesiology",
         "Customized treatment plan",
-        "Education on frequency healing principles",
+        "Information about frequency wellness principles",
         "First treatment session included",
         "Ongoing support recommendations"
       ],
@@ -139,7 +142,7 @@
       "id": "remote",
       "name": "remote",
       "displayName": "Remote Frequency Sessions",
-      "description": "Experience the power of distance healing through our remote frequency sessions. Using advanced quantum field technology, Victoria can provide personalized frequency healing from anywhere in the world. These sessions include EMF and radiation mitigation benefits, creating a protective healing field that extends to you and your pets.",
+      "description": "Remote frequency sessions utilize biofield technology principles for distance wellness support. Using specialized equipment, Victoria provides personalized frequency protocols accessible worldwide. These sessions include wellness information about EMF awareness and natural wellness approaches that may benefit both you and your pets.",
       "benefits": [
         "Convenient healing from home",
         "Personalized frequency protocols",
@@ -180,13 +183,13 @@
       "id": "herbalism",
       "name": "herbalism",
       "displayName": "Herbal Wellness Consultation",
-      "description": "Discover the healing power of plants with Victoria's expert herbalism consultations. Drawing from her master certification studies at the National Health Institute in Maui, Victoria creates personalized herbal protocols that work synergistically with your body's natural healing processes.",
+      "description": "Learn about botanical wellness through Victoria's herbalism consultations. Drawing from her master certification studies at the National Health Institute in Maui, Victoria provides wellness information about personalized herbal approaches that may complement your body's natural wellness processes.",
       "benefits": [
         "Personalized herbal remedy recommendations",
         "Natural support for chronic conditions",
         "Plant-based nutritional guidance",
         "Integration with frequency healing modalities",
-        "Education on herbal preparation methods",
+        "Information about herbal preparation methods",
         "Holistic approach combining herbs with energy medicine"
       ],
       "durations": [

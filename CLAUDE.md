@@ -37,15 +37,15 @@ npm run lint         # Run ESLint with Next.js config
 - **State**: React hooks (no global state management)
 
 ### Directory Structure
-- `/src/app/` - Next.js App Router pages
-  - `page.tsx` - Main homepage
-  - `home-b/`, `home-c/`, `home-d/` - Alternative homepage designs
-  - `gallery/` - Gallery page
+- `/src/app/` - Next.js App Router pages (about, booking, contact, gallery, services, etc.)
 - `/src/components/` - Organized by type:
   - `/layout/` - Navigation, Footer, FramedLayout
   - `/sections/` - Hero, About, Services, TransformationStories, etc.
-  - `/ui/` - Button, Card, Input, Modal, Loading
-- `/src/types/` - TypeScript interfaces (service.ts, booking.ts, client.ts)
+  - `/ui/` - Button, Card, Input, Modal, Loading, quantum UI components
+- `/src/types/` - TypeScript interfaces (service.ts, booking.ts, client.ts, index.ts)
+- `/src/hooks/` - Custom React hooks (useIntersectionObserver, useMediaQuery)
+- `/src/utils/` - Utility functions (performanceUtils.ts)
+- `/src/config/` - Configuration files (featureFlags.ts)
 - `/src/content/services.json` - Service definitions with pricing/packages
 - `/email-templates/` - HTML email templates for welcome emails
 
@@ -54,8 +54,11 @@ npm run lint         # Run ESLint with Next.js config
 1. **Component Organization**: Components are categorized by their role (layout/sections/ui)
 2. **Type Safety**: All components have TypeScript interfaces in `/src/types/`
 3. **Service Data**: All service information (Tesla Table, RoXiva, etc.) is centralized in `/src/content/services.json`
-4. **Path Aliases**: Use `@/` for imports from src directory
-5. **Multiple Hero Variants**: Different hero sections (Hero, HeroB, HeroC, HeroD) for A/B testing
+4. **Path Aliases**: Use `@/` for imports from src directory (configured in tsconfig.json)
+5. **Focused Architecture**: Single Hero component with optimized design patterns
+6. **Custom Hooks**: Reusable hooks for intersection observation and media queries
+7. **Performance Monitoring**: Utilities for tracking performance metrics
+8. **Quantum UI System**: Advanced UI components with energy-themed animations
 
 ### Important Configuration
 
@@ -73,10 +76,13 @@ DATABASE_URL=postgresql://... (optional)
 **Static Export**: Site is configured for static hosting via `output: 'export'` in `next.config.js`. Image optimization is disabled, and all routes are pre-rendered at build time.
 
 **Tailwind Custom Colors**:
-- `terracotta`: Earth tone palette (100-700)
-- `sage`: Natural green tones (500-600)
+- `terracotta`: Earth tone palette (50-700) - primary brand colors
+- `sage`: Natural green tones (50-700) 
+- `quantum`: Deep luxury tones (forest, sage, energy, plasma, neural, gold, glow)
+- `flow`: Quantum healing gradient palette (50-900)
 - `warmGold`: Muted gold accent (#D4A574)
 - `cream`: Light background (#F5F5DC)
+- Custom animations: `quantum-pulse`, `energy-flow`
 
 ## Development Guidelines
 
@@ -107,6 +113,12 @@ The booking types in `/src/types/booking.ts` use Zod schemas for validation:
 - Service types: "tesla-table", "roxiva", "consultation", "remote"
 - Payment methods: "stripe", "apple-pay", "google-pay"
 - Booking statuses: pending, confirmed, completed, cancelled
+
+### Custom Hooks & Utilities
+- **useIntersectionObserver**: Hook for tracking element visibility (used for animations)
+- **useMediaQuery**: Hook for responsive design breakpoints
+- **performanceUtils**: Utilities for performance monitoring and optimization
+- **featureFlags**: Configuration system for toggling features
 
 ### Deployment
 The site builds to static files:

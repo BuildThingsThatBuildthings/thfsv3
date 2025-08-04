@@ -5,13 +5,15 @@ export * from './client';
 
 // Common UI types
 export interface ButtonProps {
-  variant?: 'primary' | 'secondary' | 'outline';
+  variant?: 'primary' | 'secondary' | 'elevated' | 'subtle' | 'soft' | 'ghost' | 'outline'; // 'outline' deprecated - use 'elevated'
   size?: 'sm' | 'md' | 'lg';
   children: React.ReactNode;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   href?: string;
   disabled?: boolean;
+  loading?: boolean;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 export interface CardProps {
@@ -20,21 +22,22 @@ export interface CardProps {
   hover?: boolean;
 }
 
-export interface InputProps {
-  label?: string;
-  error?: string;
-  required?: boolean;
-  type?: 'text' | 'email' | 'tel' | 'password' | 'number';
-  placeholder?: string;
-  value?: string;
-  onChange?: (value: string) => void;
-  className?: string;
-}
-
-export interface ModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  title?: string;
-  children: React.ReactNode;
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-}
+// Commented out unused interface exports to optimize bundle size
+// export interface InputProps {
+//   label?: string;
+//   error?: string;
+//   required?: boolean;
+//   type?: 'text' | 'email' | 'tel' | 'password' | 'number';
+//   placeholder?: string;
+//   value?: string;
+//   onChange?: (value: string) => void;
+//   className?: string;
+// }
+// 
+// export interface ModalProps {
+//   isOpen: boolean;
+//   onClose: () => void;
+//   title?: string;
+//   children: React.ReactNode;
+//   size?: 'sm' | 'md' | 'lg' | 'xl';
+// }

@@ -45,8 +45,9 @@ export function Footer() {
               transition={{ duration: 1.0, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              Nashville&apos;s premier destination for frequency-based healing. Experience transformative 
-              wellness through our exclusive Tesla Wellness Table and RoXiva light therapy sessions.
+              A wellness center specializing in frequency healing and biofield research. 
+              Learn about Tesla biofield technology, RoXiva light therapy, and frequency-based 
+              approaches to wellness through guided information sessions.
             </motion.p>
             
             <motion.div 
@@ -58,15 +59,15 @@ export function Footer() {
             >
               <div className="flex items-center gap-2 text-sm text-slate-400">
                 <div className="w-1.5 h-1.5 bg-gold rounded-full" />
-                <span>30+ Years Experience</span>
+                <span>Wellness Approach to Frequency Wellness</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-slate-400">
                 <div className="w-1.5 h-1.5 bg-gold rounded-full" />
-                <span>Nashville&apos;s Only Tesla Wellness Table</span>
+                <span>Advanced Tesla Quantum Technology</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-slate-400">
                 <div className="w-1.5 h-1.5 bg-gold rounded-full" />
-                <span>1000+ Lives Transformed</span>
+                <span>Biofield Research & Learning Center</span>
               </div>
             </motion.div>
           </div>
@@ -110,14 +111,6 @@ export function Footer() {
             <h4 className="text-lg font-medium text-white mb-6">Connect</h4>
             <div className="space-y-4">
               <div className="space-y-2">
-                <div className="text-sm text-slate-400 uppercase tracking-wider">Location</div>
-                <div className="text-slate-300">
-                  123 Healing Way<br />
-                  Nashville, TN 37203
-                </div>
-              </div>
-              
-              <div className="space-y-2">
                 <div className="text-sm text-slate-400 uppercase tracking-wider">Phone</div>
                 <a 
                   href="tel:+16155554325" 
@@ -150,27 +143,6 @@ export function Footer() {
           </motion.div>
         </motion.div>
         
-        {/* Emergency Support */}
-        <motion.div
-          className="bg-gradient-to-r from-terracotta-500/10 to-sage/10 rounded-xl p-6 mb-12 border border-terracotta-500/20"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.0, delay: 0.5 }}
-          viewport={{ once: true }}
-        >
-          <div className="text-center">
-            <h4 className="text-terracotta-400 font-medium mb-2">24/7 Client Support Line</h4>
-            <p className="text-slate-300 text-sm mb-3">
-              For existing clients experiencing healing reactions or urgent questions
-            </p>
-            <a 
-              href="tel:+16155554273" 
-              className="text-white font-medium text-lg hover:text-terracotta-400 transition-colors duration-300"
-            >
-              (615) 555-CARE
-            </a>
-          </div>
-        </motion.div>
 
         {/* Bottom Bar */}
         <motion.div
@@ -186,7 +158,7 @@ export function Footer() {
                 © {currentYear} The Healing Frequency Space. All rights reserved.
               </p>
               <p className="text-slate-500 text-xs">
-                Licensed healing sanctuary in Nashville, Tennessee
+                Professional frequency healing services
               </p>
             </div>
             
@@ -205,12 +177,12 @@ export function Footer() {
               
               {/* Social Icons Placeholder */}
               <div className="flex gap-3">
-                {['📧', '📞', '📍'].map((icon, index) => (
+                {['email', 'phone', 'location'].map((type, index) => (
                   <div 
                     key={index}
                     className="w-8 h-8 bg-slate-700 rounded-full flex items-center justify-center hover:bg-terracotta-500 transition-colors duration-300 cursor-pointer"
                   >
-                    <span className="text-sm">{icon}</span>
+                    <div className="w-3 h-3 bg-white rounded-sm opacity-80" />
                   </div>
                 ))}
               </div>

@@ -11,12 +11,14 @@ module.exports = {
         'terracotta': {
           50: '#FAF7F5',   // Very light terracotta
           100: '#F5E6D8',  // Light terracotta background
+          150: '#F0DCC8',  // Enhanced light terracotta for better hover
           200: '#E8C4A6',  // Light terracotta border
           300: '#D9A076',  // Medium-light terracotta
           400: '#CA8D61',  // Medium terracotta
           500: '#C17E5A',  // Natural clay/earth tone (primary)
           600: '#A66B47',  // Deeper earth tone
-          700: '#8B5A3C'   // Dark terracotta
+          700: '#8B5A3C',  // Dark terracotta
+          800: '#6B4429'   // Very dark terracotta for high contrast text
         },
         'slate': {
           50: '#F8FAFC',
@@ -56,7 +58,49 @@ module.exports = {
           600: '#7A9178',  // Deeper sage
           700: '#657D63'   // Dark sage
         },
-        'warmGold': '#D4A574' // More muted, natural gold tone
+        'warmGold': '#D4A574', // More muted, natural gold tone
+        // Quantum-Nature Color System
+        'quantum': {
+          forest: '#1a3d2e',   // Deep forest green for luxury depth
+          sage: '#4a6741',     // Enhanced sage with quantum undertones
+          energy: '#6b8e5a',   // Vibrant sage for energy fields
+          plasma: '#7dd3c0',   // Subtle cyan for quantum tech effects
+          neural: '#f8faf9',   // Cool-tinted white
+          gold: '#7a6640',     // WCAG AA compliant quantum gold
+          glow: '#50C878'      // Energy green for glow effects
+        },
+        'flow': {
+          50: '#f0f9f4',    // Lightest quantum healing
+          100: '#dcf2e3',   // Light energy field
+          200: '#b8e5c8',   // Soft quantum glow
+          300: '#8fd5a6',   // Medium quantum energy
+          400: '#5fbf81',   // Vibrant healing frequency
+          500: '#3da55f',   // Core healing frequency
+          600: '#2d8749',   // Deep quantum energy
+          700: '#256d3b',   // Quantum depth
+          800: '#1f5530',   // Dark healing energy
+          900: '#1a4729'    // Deepest forest quantum
+        }
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
+      boxShadow: {
+        'quantum-glow': '0 0 20px rgba(107, 142, 90, 0.3), 0 0 40px rgba(107, 142, 90, 0.1)',
+      },
+      animation: {
+        'quantum-pulse': 'quantum-pulse 3s ease-in-out infinite',
+        'energy-flow': 'energy-flow 4s ease-in-out infinite',
+      },
+      keyframes: {
+        'quantum-pulse': {
+          '0%, 100%': { transform: 'scale(1)', opacity: '0.7' },
+          '50%': { transform: 'scale(1.05)', opacity: '1' },
+        },
+        'energy-flow': {
+          '0%, 100%': { transform: 'translateX(0) scale(1)' },
+          '50%': { transform: 'translateX(10px) scale(1.02)' },
+        },
       },
       fontFamily: {
         'inter': ['var(--font-inter)', 'Inter', 'sans-serif'],

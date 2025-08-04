@@ -40,7 +40,7 @@ export function FramedLayout({
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
-      {/* Framed container - Haum Nashville inspired */}
+      {/* Framed container - Elegant design inspired */}
       <div className={`
         relative h-full 
         border-8 ${borderClasses[borderColor]} 
