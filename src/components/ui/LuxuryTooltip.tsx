@@ -91,7 +91,7 @@ export const LuxuryTooltip = ({
         window.removeEventListener('resize', handleResize);
       };
     }
-  }, [isVisible, position]);
+  }, [isVisible, position, updateTooltipPosition]);
   
   useEffect(() => {
     return () => {

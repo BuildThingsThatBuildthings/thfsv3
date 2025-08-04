@@ -21,13 +21,13 @@ export function Navigation() {
   ];
   
   return (
-    <nav className="fixed top-0 w-full z-50 bg-quantum-neural/95 backdrop-blur-sm border-b border-flow-200/30 shadow-sm">
+    <nav className="fixed top-0 w-full z-50 bg-cream/95 backdrop-blur-sm border-b border-flow-200/30 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-14 md:h-16">
           {/* Brand name - luxury minimalist */}
           <Link 
             href="/" 
-            className="text-base md:text-lg font-light text-quantum-forest tracking-[0.25em] hover:text-quantum-gold transition-colors duration-300"
+            className="text-base md:text-lg font-light text-terracotta-800 tracking-[0.25em] hover:text-warmGold transition-colors duration-300"
           >
             <span className="hidden sm:inline">
               HEALING FREQUENCY SPACE
@@ -49,8 +49,8 @@ export function Navigation() {
                   className={`
                     text-sm font-normal tracking-wide transition-all duration-200 py-2 relative
                     ${isActive
-                      ? 'text-quantum-gold'
-                      : 'text-flow-600 hover:text-quantum-gold'
+                      ? 'text-warmGold'
+                      : 'text-flow-600 hover:text-warmGold'
                     }
                   `}
                 >
@@ -58,7 +58,7 @@ export function Navigation() {
                   
                   {/* Clean underline for active/hover states */}
                   <span className={`
-                    absolute bottom-0 left-0 h-px bg-quantum-gold transition-all duration-200
+                    absolute bottom-0 left-0 h-px bg-warmGold transition-all duration-200
                     ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}
                   `} />
                 </Link>
@@ -80,7 +80,7 @@ export function Navigation() {
           
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2 text-flow-600 hover:text-quantum-gold transition-colors duration-200"
+            className="lg:hidden p-2 text-flow-600 hover:text-warmGold transition-colors duration-200"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
           >
@@ -113,7 +113,7 @@ export function Navigation() {
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
-              className="lg:hidden border-t border-flow-200/30 bg-quantum-neural/98"
+              className="lg:hidden border-t border-flow-200/30 bg-cream/98"
               initial={{ opacity: 0, height: 0 }}
               animate={{ 
                 opacity: 1,
@@ -138,8 +138,8 @@ export function Navigation() {
                       className={`
                         block text-base font-normal py-3 px-4 transition-colors duration-200 relative
                         ${isActive
-                          ? 'text-quantum-gold'
-                          : 'text-flow-600 hover:text-quantum-gold'
+                          ? 'text-warmGold'
+                          : 'text-flow-600 hover:text-warmGold'
                         }
                       `}
                       onClick={() => setIsMobileMenuOpen(false)}
@@ -148,7 +148,7 @@ export function Navigation() {
                       
                       {/* Active indicator */}
                       {isActive && (
-                        <span className="absolute left-0 top-1/2 w-1 h-4 bg-quantum-gold rounded-r transform -translate-y-1/2" />
+                        <span className="absolute left-0 top-1/2 w-1 h-4 bg-warmGold rounded-r transform -translate-y-1/2" />
                       )}
                     </Link>
                   );
