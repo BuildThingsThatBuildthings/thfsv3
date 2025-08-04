@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { ReactNode, useState, useRef, useEffect } from "react";
+import { ReactNode, useState, useRef, useEffect, useCallback } from "react";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 interface LuxuryTooltipProps {
@@ -26,7 +26,7 @@ export const LuxuryTooltip = ({
   const prefersReducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)');
   const timeoutRef = useRef<NodeJS.Timeout>();
   
-  const updateTooltipPosition = () => {
+  const updateTooltipPosition = useCallback(() => {
     if (!triggerRef.current || !tooltipRef.current) return;
     
     const triggerRect = triggerRef.current.getBoundingClientRect();
@@ -61,7 +61,7 @@ export const LuxuryTooltip = ({
     y = Math.max(8, Math.min(y, viewportHeight - tooltipRect.height - 8));
     
     setTooltipPosition({ x, y });
-  };
+  }, [position]);
   
   const handleMouseEnter = () => {
     timeoutRef.current = setTimeout(() => {

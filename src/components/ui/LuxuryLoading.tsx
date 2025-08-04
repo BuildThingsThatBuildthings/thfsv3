@@ -67,9 +67,8 @@ export const LuxuryLoading = ({
                 ease: "linear"
               }}
               style={{
-                borderStyle: 'dashed',
-                borderDasharray: '10 20'
-              }}
+                borderStyle: 'dashed'
+              } as React.CSSProperties}
             />
             
             <motion.div
