@@ -35,8 +35,8 @@ export const LuxuryPageTransition = ({ children, className = "" }: LuxuryPageTra
   };
   
   const pageTransition = {
-    type: "tween",
-    ease: [0.25, 0.8, 0.25, 1],
+    type: "tween" as const,
+    ease: [0.25, 0.8, 0.25, 1] as const,
     duration: prefersReducedMotion ? 0.15 : 0.6
   };
   

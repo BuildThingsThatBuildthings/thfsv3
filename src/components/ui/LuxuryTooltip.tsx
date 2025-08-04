@@ -24,7 +24,7 @@ export const LuxuryTooltip = ({
   const triggerRef = useRef<HTMLDivElement>(null);
   const tooltipRef = useRef<HTMLDivElement>(null);
   const prefersReducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)');
-  const timeoutRef = useRef<NodeJS.Timeout>();
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   
   const updateTooltipPosition = useCallback(() => {
     if (!triggerRef.current || !tooltipRef.current) return;
